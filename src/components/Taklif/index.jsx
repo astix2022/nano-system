@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Container,
-  InpBox,
-  Input,
-  TextArea,
-  Title,
-  Wrapper,
-} from "./styled";
-import Navbar from "../../components/Navbar";
+import { Button, Container, InpBox, Input, TextArea, Title, Wrapper} from "./styled";
 import Footer from "../Footer";
 
 const Taklif = () => {
@@ -31,6 +22,7 @@ const Taklif = () => {
           </InpBox>
         </Wrapper>
       </Container>
+      <Footer/>
     </div>
   );
 };

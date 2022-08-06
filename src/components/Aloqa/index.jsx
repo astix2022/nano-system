@@ -1,8 +1,12 @@
 import React from 'react'
+import Footer from '../Footer'
 
 const Aloqa = () => {
   return (
-    <div>Aloqa</div>
+    <div>
+      Aloqa
+      <Footer/>
+    </div>
   )
 }
 
