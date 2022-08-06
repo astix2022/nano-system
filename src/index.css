@@ -1,0 +1,56 @@
+/* * Font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@300&display=swap");
+
+/* * Parametrs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* * Colors */
+:root {
+  --primaryColor: #0152ae;
+  --secondaryColor: #000000;
+  --activeColor: #ffffff;
+}
+
+/* * Heper classes */
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 49px;
+  line-height: 59px;
+  letter-spacing: 0.02em;
+  color: #066ac9;
+}
+
+.sub-title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* * text-center */
+.center{
+  text-align: center;
+}
+
