@@ -1,12 +1,7 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Card, Des } from './style'
 import NoImg from '../../../assets/imgs/No img.png'
-
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-
 
 
 import { Pagination, Navigation } from "swiper";

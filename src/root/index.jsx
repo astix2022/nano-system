@@ -7,7 +7,7 @@ const Root =()=>{
     return(
         <div>
             <Routes>
-                <Route path="/" element={<Navigate to={'/aloqa'}/>}/>
+                <Route path="/" element={<Navigate to={'/asosiy'}/>}/>
                 <Route element={<Navbar/>}>
                     {
                         navbar.map(({id,element,path,})=>{
@@ -30,5 +30,5 @@ const Root =()=>{
             </Routes>
         </div>
     )
-}
+}  
 export default Root
