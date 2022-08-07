@@ -1,13 +1,12 @@
 import React from 'react'
 import { navbar } from '../../utils/navbar';
-import {Outlet, useNavigate, useLocation } from 'react-router-dom';
+import {Outlet, useNavigate} from 'react-router-dom';
 import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons, } from './style';
 const Navbar = () => {
   const navigate = useNavigate()
   return (
     <Container>
         <Header>
-
             <Wrapper>
               <NavLogo onClick={()=> navigate('/asosiy')}><h2>Logo</h2></NavLogo>
               <Nav>

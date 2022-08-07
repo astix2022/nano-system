@@ -52,6 +52,29 @@ const LeftWrapp = styled.div`
             border-radius: 12px;
         }
     }
+    .card-info{
+        margin-left: 10px;
+    }
+    .card__info{
+        width: 40px;
+        height: 24px;
+        font-style: normal;
+        font-weight: 580;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    .teachers{
+        width: 53px;
+        height: 16px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
 
 `
 const RightWrapp = styled.div``
