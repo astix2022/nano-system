@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import Root from './root';
 import './index.css';
-import Signin from './pages/Signin'
+import {QueryClientProvider, QueryClient} from 'react-query'
+import Signin from './pages/Signin';
+import { Nav } from './components/Navbar/style';
 
-const count = 5
+
+const query = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <BrowserRouter>
-    {
-      count === 5 ? <Root/> : <Signin/>
-    }
+      <QueryClientProvider client={query}>
+       <Root/>
+      </QueryClientProvider>
     </BrowserRouter> 
   </>
 );

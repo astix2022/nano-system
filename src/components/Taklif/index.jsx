@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, InpBox, Input, TextArea, Title, Wrapper} from "./styled";
 import Footer from "../Footer";
+import Signin from '../../pages/Signin'
 
 const Taklif = () => {
   return (
