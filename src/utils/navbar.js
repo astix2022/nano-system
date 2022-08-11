@@ -2,6 +2,7 @@ import AsosiyPage from '../pages/AsosiyPage'
 import TaklifPage from '../pages/TaklifPage'
 import ArizaPage from '../pages/ArizaPage'
 import AloqaPage from '../pages/AloqaPage'
+import Signin from '../pages/Signin'
 
 export const navbar = [
     {
@@ -35,5 +36,6 @@ export const navbar = [
         element:<AloqaPage/>,
         search:false,
         private:true,
+
     },
 ]

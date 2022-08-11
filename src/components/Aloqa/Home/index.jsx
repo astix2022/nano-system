@@ -14,7 +14,7 @@ const Home = () => {
                     <div className='adress'>
                         <h1 className='adress-title'>Email:</h1>
                         <a href="#">
-                            <p className='link'>juratbekxudayberganov9@gmail.com</p>
+                            <p className='link'>example@gmail.com</p>
                         </a>
                     </div>
                     <div className='adress'>

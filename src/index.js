@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import Root from './root';
-import Signin from './pages/Signin';
 import './index.css';
+import {QueryClientProvider, QueryClient} from 'react-query'
+import Signin from './pages/Signin';
+import { Nav } from './components/Navbar/style';
 
 
-const count = 'data'
+const query = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <BrowserRouter>
-     {
-      count === 'data' && <Root/> || <Signin/>
-     }
+      <QueryClientProvider client={query}>
+       <Root/>
+      </QueryClientProvider>
     </BrowserRouter> 
   </>
 );

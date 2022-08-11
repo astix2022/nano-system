@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, LeftWrapp, RightWrapp } from './style'
 import Education from '../../../assets/imgs/education.png'
 import { ReactComponent as User } from '../../../assets/icons/user-tie.svg'
+import { ReactComponent as Student } from '../../../assets/icons/student.svg'
 
 const Home = () => {
   return (
@@ -13,13 +14,16 @@ const Home = () => {
               <div className="card">
                 <span><User/></span>
                 <span className='card-info'>
-                  <div>50+</div>
-                  <div>Ustozlar</div>
+                  <div className='card__info'>50+</div>
+                  <div className='teachers'>Ustozlar</div>
                 </span>
               </div>
               <div className="card">
-                <span></span>
-                <span className='card-info'></span>
+                <span><Student/></span>
+                <span className='card-info'>
+                  <div className='card__info'>270+</div>
+                  <div className='teachers'>O’quvchilar</div>
+                </span>
               </div>
             </div>
         </LeftWrapp>

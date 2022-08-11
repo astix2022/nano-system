@@ -10,6 +10,8 @@ import {
   Wrapper,
 } from "./styled";
 
+
+
 const Taklif = () => {
   return (
     <div className="block-center">

@@ -107,9 +107,6 @@ const Bottom = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
-    margin-top: 24px;
-
     .bottom-title{
     font-weight: 600;
     font-size: 25px;

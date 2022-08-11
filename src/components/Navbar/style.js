@@ -6,9 +6,6 @@ import {ReactComponent as User} from '../../assets/icons/user-avatar.svg'
 
 const Container = styled.div`
     width: 100%;
-	.kMAvaR{
-		background-color: #ffffff;
-	}
 `
 const Header = styled.header`
 	width: 100%;
@@ -33,21 +30,21 @@ const Wrapper = styled.div`
 	background-color: #ffffff;
 	background-color: white;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+	.active{
+		color: #0152AE;
+	}
 `
 const Nav = styled.nav`
 	display: flex;
 	gap: 24px;
 `
 const Link = styled(NavLink)`
-	font-family: 'Poppins';
+  	font-family: 'Poppins', sans-serif;
 	font-style: normal;
 	font-weight: 560;
 	font-size: 20px;
 	line-height: 30px;
 	color: #000000;
-	:focus{
-		color: #0152AE;
-	}
 `
 const NavLogo = styled.div`
 	cursor: pointer;
