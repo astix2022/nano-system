@@ -7,13 +7,13 @@ const Navbar = () => {
   const navigate = useNavigate()
   const [visible, setVisible] = useState(false);
 
-  const hide = () => {
-    setVisible(false);
-  };
-
   const handleVisibleChange = (newVisible) => {
     setVisible(newVisible);
   };
+  function logOut (){
+		localStorage.clear()
+		navigate('/signin')
+	}
   const Content = () =>{
     return (
       <div>
@@ -48,7 +48,7 @@ const Navbar = () => {
             </div>
             <div className='icon-wrapper'>
               <Popover
-                content={<a onClick={hide}>Chiqish</a>}
+                content={<button onClick={logOut}>Chiqish</button>}
                 title={Content()}
                 trigger="click"
                 visible={visible}
