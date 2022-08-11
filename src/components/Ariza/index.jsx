@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import {
   Button,
@@ -10,16 +9,9 @@ import {
   Title,
   Wrapper,
 } from "./styled";
-import Navbar from "../../components/Navbar";
-import Footer from "../Footer";
-=======
-import React from 'react'
-import Footer from '../Footer'
->>>>>>> b9467242907dcc0aef091f999f2942edb93dc0a5
 
 const Taklif = () => {
   return (
-<<<<<<< HEAD
     <div className="block-center">
       <Container>
         <Wrapper>
@@ -44,13 +36,5 @@ const Taklif = () => {
     </div>
   );
 };
-=======
-    <div>
-      Ariza
-      <Footer/>
-    </div>
-  )
-}
->>>>>>> b9467242907dcc0aef091f999f2942edb93dc0a5
 
-export default Taklif;
+export default Taklif
