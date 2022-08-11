@@ -26,6 +26,7 @@ const Navbar = () => {
   }
   return (
     <Container>
+<<<<<<< HEAD
       <Header>
         <Wrapper>
           <NavLogo onClick={() => navigate('/asosiy')}><h2>Logo</h2></NavLogo>
@@ -60,6 +61,36 @@ const Navbar = () => {
       <main>
         <Outlet />
       </main>
+=======
+        <Header>
+            <Wrapper>
+              <NavLogo onClick={()=> navigate('/asosiy')}><h2>Logo</h2></NavLogo>
+              <Nav>
+                {
+                  navbar.map(({id, title, path, hidden})=>{
+                    return !hidden &&(
+                      <Link key={id} to={path}>{title}</Link>
+                    ) 
+                  })
+                }    
+              </Nav>
+              <Icons>
+                <div className='icon-wrapper'>
+                  <Icons.Search/>
+                </div>
+                <div className='icon-wrapper'>
+                  <Icons.Sun/>
+                </div>
+                <div className='icon-wrapper'>
+                  <Icons.User/>
+                </div>
+              </Icons>
+            </Wrapper>
+        </Header>
+        <main>
+			<Outlet />
+		</main>
+>>>>>>> 4737f03aad41a72bf05e3d9c086ba7d453e6c9fe
     </Container>
   )
 }
