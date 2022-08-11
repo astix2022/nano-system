@@ -16,8 +16,6 @@ root.render(
        {
         localStorage.getItem('token') ? <Root/> : <Signin/>
        }
-       
-
       </QueryClientProvider>
     </BrowserRouter> 
   </>
