@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Button,
   Container,
@@ -9,6 +8,11 @@ import {
   Title,
   Wrapper,
 } from "./styled";
+
+import React from 'react';
+
+
+
 
 
 
