@@ -11,8 +11,10 @@ const Navbar = () => {
               <NavLogo onClick={()=> navigate('/asosiy')}><h2>Logo</h2></NavLogo>
               <Nav>
                 {
-                  navbar.map(({id, title, path,})=>{
-                    return <Link key={id} to={path}>{title}</Link>
+                  navbar.map(({id, title, path, hidden})=>{
+                    return !hidden &&(
+                      <Link key={id} to={path}>{title}</Link>
+                    ) 
                   })
                 }    
               </Nav>

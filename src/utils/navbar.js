@@ -10,7 +10,8 @@ export const navbar = [
         title:'Asosiy',
         path:'/asosiy',
         element:<AsosiyPage/>,
-        search:false,
+        search: '?',
+        hidden: false,
         private:true,
     },
     {
@@ -18,7 +19,8 @@ export const navbar = [
         title:'Taklif',
         path:'/taklif',
         element:<TaklifPage/>,
-        search:false,
+        search: '?',
+        hidden: false,
         private:true,
     },
     {
@@ -26,7 +28,8 @@ export const navbar = [
         title:'Ariza',
         path:'/ariza',
         element:<ArizaPage/>,
-        search:false,
+        search: '?',
+        hidden: false,
         private:true,
     },
     {
@@ -34,8 +37,20 @@ export const navbar = [
         title:'A`loqa',
         path:'/aloqa',
         element:<AloqaPage/>,
-        search:false,
+        search: '?',
+        hidden: false,
         private:true,
 
     },
+    {
+        id:5,
+        title:'Signin',
+        path:'/signin',
+        element:<Signin/>,
+        search: '?',
+        hidden: true,
+        private:true,
+
+    },
+    
 ]
