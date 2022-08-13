@@ -62,7 +62,7 @@ const Navbar = () => {
         </Wrapper>
       </Header>
       <main>
-        <Outlet />
+        <Outlet/>
       </main>
     </Container>
   )

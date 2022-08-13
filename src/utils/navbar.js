@@ -3,6 +3,7 @@ import TaklifPage from '../pages/TaklifPage'
 import ArizaPage from '../pages/ArizaPage'
 import AloqaPage from '../pages/AloqaPage'
 import Signin from '../pages/Signin'
+// import { ReactComponent as Icon } from '../assets/'
 
 export const navbar = [
     {
@@ -11,6 +12,7 @@ export const navbar = [
         path:'/asosiy',
         element:<AsosiyPage/>,
         search: '?',
+        icon : '',
         hidden: false,
         private:true,
     },

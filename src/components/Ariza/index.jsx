@@ -8,6 +8,7 @@ import {
   Title,
   Wrapper,
 } from "./styled";
+import Footer from '../Footer'
 
 import React from 'react';
 import Reveal from 'react-reveal/Reveal';
@@ -42,6 +43,7 @@ const Taklif = () => {
           </InpBox>
         </Wrapper>
       </Container>
+      <Footer/>
     </div>
     </Reveal>
   );
