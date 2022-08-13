@@ -7,6 +7,7 @@ import Signin from './pages/Signin';
 import Routers from './routers';
 import RouterSatbar from './Admin/RouterSaytbar'
 import Root from './root';
+import Saytbar from './Admin/components/Saytbar';
 
 const query = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,7 @@ root.render(
   <>
     <BrowserRouter>
       <QueryClientProvider client={query}>
-        <Root/>
+        <Saytbar/>
       </QueryClientProvider>
     </BrowserRouter> 
   </>
