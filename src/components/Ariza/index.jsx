@@ -10,6 +10,7 @@ import {
 } from "./styled";
 
 import React from 'react';
+import Reveal from 'react-reveal/Reveal';
 
 
 
@@ -18,6 +19,8 @@ import React from 'react';
 
 const Taklif = () => {
   return (
+    <Reveal>
+
     <div className="block-center">
       <Container>
         <Wrapper>
@@ -40,6 +43,7 @@ const Taklif = () => {
         </Wrapper>
       </Container>
     </div>
+    </Reveal>
   );
 };
 
