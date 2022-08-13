@@ -9,6 +9,7 @@ import {
   Title,
   Wrapper,
 } from "./styled";
+import Footer from '../Footer'
 
 
 
@@ -35,6 +36,7 @@ const Taklif = () => {
           </InpBox>
         </Wrapper>
       </Container>
+      <Footer/>
     </div>
   );
 };
