@@ -10,22 +10,35 @@ const Container  = styled.div`
 const Wrapper = styled.div`
     width: 260px;
     height: 100vh;
-    border: 1px solid red;
     display: flex;
-    align-items: center;
+    background-color: #ffffff;
     flex-direction: column;
+    gap: 24px;
+    .logo{
+        margin-left: 16px;
+        margin-top: 23px;
+    }
+    .active{
+		color: #0152AE;
+        fill: #0152AE;
+	}
+    .wrap{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-left: 34px;    
+    }
 `
 
 const Result = styled.div`
     width:100% ;
-    border: 1px solid black;
+    background-color: #FAFAFA;
 `
 
 const Link = styled(NavLink)`
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
     color: #9E9E9E;
 `
 export

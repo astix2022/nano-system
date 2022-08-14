@@ -15,10 +15,11 @@ root.render(
   <>
     <BrowserRouter>
       <QueryClientProvider client={query}>
-        <Saytbar/>
+        <RouterSatbar/>
       </QueryClientProvider>
     </BrowserRouter> 
   </>
+  
 );
 
 

@@ -6,6 +6,14 @@ import ChopEtishPage from '../pages/ChopEtishPage'
 import SinflarPage from '../pages/SinflarPage'
 import UstozlarPage from '../pages/UstozlarPage'
 import SozlamalarPage from '../pages/SozlamalarPage'
+import dash from "../../assets/icons/dash.svg";
+import arizalar from "../../assets/icons/dash_arizalar.svg";
+import taklif from "../../assets/icons/dash_takliflar.svg";
+import yoqlama from "../../assets/icons/dash_yoqlama.svg";
+import chopetish from "../../assets/icons/dash_chopetish.svg";
+import sinflar from "../../assets/icons/dash_sinflar.svg";
+import ustozlar from "../../assets/icons/dash_ustozlar.svg";
+import settings from "../../assets/icons/dash_settings.svg";
 
 export const saytbar = [
     {
@@ -16,6 +24,7 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
+        icon: dash,
     },
     {
         id:2,
@@ -25,6 +34,7 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
+        icon: arizalar,
     },
     {
         id:3,
@@ -34,6 +44,7 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
+        icon: taklif,
     },
     {
         id:4,
@@ -43,17 +54,17 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-
+        icon: yoqlama,
     },
     {
         id:5,
-        title:'ChopEtish',
+        title:'Chop Etish',
         path:'/chopEtish',
         element:<ChopEtishPage/>,
         search: '?',
         hidden: false,
         private:true,
-
+        icon: chopetish,
     },
     {
         id:6,
@@ -63,7 +74,7 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-
+        icon: sinflar,
     },
     {
         id:7,
@@ -73,7 +84,7 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-
+        icon: ustozlar,
     },
     {
         id:8,
@@ -83,7 +94,6 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-
+        icon: settings,
     },
-    
 ]
