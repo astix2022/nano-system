@@ -1,14 +1,18 @@
 import React from "react";
 import Saytbar from './Admin/RouterSaytbar'
 import Router from './routers'
+import {useNavigate} from 'react-router-dom'
 
-const count = 5
 const Root = () =>{
-    if(count === 5){
-      return  <Router/>
+  const navigate = useNavigate()
+    if(localStorage.getItem('role' === 'ceo')){
+      return <Saytbar/> && navigate('/dashboard')
     }
-    else if (count === 6){
-       return <Saytbar/>
+    else if(localStorage.getItem('role' === 'user')){
+      return <Router/> && navigate('/asosiy')
+    }
+    else{
+      return <Router/> && navigate('/asosiy')
     }
 }
 export default Root

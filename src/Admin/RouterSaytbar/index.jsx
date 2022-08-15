@@ -5,20 +5,20 @@ import {saytbar} from '../utils/saytbar'
 
 const RouterSaytbar =()=>{
     return(
-        <div>
+        <>
             <Routes>
-                <Route path="/" element={<Navigate to={'/dashboard'}/>}></Route>
                 <Route element={<Saytbar/>}>
-                        {
-                            saytbar.map(({id, element, path,})=>{
-                                return (
-                                    <Route key={id} path={path} element={element}/>
-                                    )
-                                })
-                        }
+                    {
+                    saytbar.map(({id, element, path,})=>{
+                        return(
+                                <Route key={id} path={path} element={element}/>
+                            )
+                        })
+                    }
                 </Route>
+                <Route path="/" element={<Navigate to={'/dashboard'}/>}/>
             </Routes>
-        </div>
+        </>
     )
 }
 export default RouterSaytbar 

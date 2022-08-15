@@ -1,6 +1,6 @@
 import React,{useRef} from 'react'
-import {useMutation} from 'react-query'
-import { useNavigate } from 'react-router-dom'
+// import {useMutation} from 'react-query'
+// import { useNavigate } from 'react-router-dom'
 import { Container, Wrapper } from './style'
 import {useDispatch, useSelector} from 'react-redux'
 import { getLogin } from '../../store/login'
@@ -8,11 +8,14 @@ import { getLogin } from '../../store/login'
 const Signin = () => {
   const LoginRef = useRef('')
   const PwRef = useRef('')
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const dispatch = useDispatch()
   const auth = useSelector(state => state.auth)
+  const store = useSelector(state => state)
 
+  // console.log(store)
+  
   // const {mutate} = useMutation(()=>{
   //   return fetch(`http://nano-system.5p-agency.uz/api/v1/users//login`, {method:'POST',
   //     headers:{'Content-type':'application/json'},
