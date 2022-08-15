@@ -15,7 +15,7 @@ const RouterSaytbar =()=>{
                                     <Route key={id} path={path} element={element}/>
                                     )
                                 })
-                            }
+                        }
                 </Route>
             </Routes>
         </div>

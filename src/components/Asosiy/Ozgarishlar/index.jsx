@@ -2,12 +2,15 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Card, Des } from './style'
 import NoImg from '../../../assets/imgs/No img.png'
+import Reveal from 'react-reveal/Reveal';
+
 
 
 import { Pagination, Navigation } from "swiper";
 
 export default function Ozgarishlar() {
   return (
+    <Reveal>
     <Container>
       <h1 className="sub-title">Maktabdagi </h1>
       <Swiper
@@ -22,7 +25,7 @@ export default function Ozgarishlar() {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
-      >
+        >
         <SwiperSlide>
           <Card>
             <img className="noImg" src={NoImg} alt="#" />
@@ -85,6 +88,7 @@ export default function Ozgarishlar() {
         </SwiperSlide>
       </Swiper>
     </Container>
+        </Reveal>
   );
 }
 

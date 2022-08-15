@@ -2,9 +2,12 @@ import React from "react";
 import { Button, Container, InpBox, Input, TextArea, Title, Wrapper} from "./styled";
 import Footer from "../Footer";
 import Signin from '../../pages/Signin'
+import Reveal from 'react-reveal/Reveal';
+
 
 const Taklif = () => {
   return (
+    <Reveal>
     <div className="block-center">
       <Container>
         <Wrapper>
@@ -25,6 +28,7 @@ const Taklif = () => {
       </Container>
       <Footer/>
     </div>
+    </Reveal>
   );
 };
 

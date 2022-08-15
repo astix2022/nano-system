@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons, } from './style';
 import { Popover } from 'antd';
+
 const Navbar = () => {
   const navigate = useNavigate()
   const [visible, setVisible] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
                 trigger="click"
                 visible={visible}
                 onVisibleChange={handleVisibleChange}
-              >
+                >
                 <Icons.User />
               </Popover>
             </div>
@@ -61,7 +62,7 @@ const Navbar = () => {
         </Wrapper>
       </Header>
       <main>
-        <Outlet />
+        <Outlet/>
       </main>
     </Container>
   )

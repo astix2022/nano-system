@@ -26,6 +26,11 @@ const InpBox = styled.div`
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 24px 27px;
+
+  .element.style{
+    border: 1px solid #000000;
+    height: 60px;
+  }
 `;
 
 const Input = styled.input`

@@ -3,10 +3,13 @@ import { Container, LeftWrapp, RightWrapp } from './style'
 import Education from '../../../assets/imgs/education.png'
 import { ReactComponent as User } from '../../../assets/icons/user-tie.svg'
 import { ReactComponent as Student } from '../../../assets/icons/student.svg'
+// import Fade from 'react-reveal/Fade';
+import Reveal from 'react-reveal/Reveal';
 
 const Home = () => {
   return (
     <Container>
+      <Reveal left>
         <LeftWrapp>
             <h1 className='title'>Chegarasiz  <span>o’qish, </span><span>sizning</span> qo’llaringizda!</h1>
             <p className='description'>Sayt ASTIX jamoasi tomonidan 45-maktab uchun yasaldi va foydalanishga topshirildi!</p>
@@ -27,9 +30,12 @@ const Home = () => {
               </div>
             </div>
         </LeftWrapp>
+      </Reveal>
+      <Reveal right>
         <RightWrapp>
             <img src={Education}/>
         </RightWrapp>
+      </Reveal>
     </Container>
   )
 }

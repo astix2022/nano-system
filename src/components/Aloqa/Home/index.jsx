@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container, Wrapper, Title, Icon, Bottom } from './style'
-
+import Reveal from 'react-reveal/Reveal';
 const Home = () => {
     return (
+        <Reveal>
+
         <Container>
             <h1 className='sub-title'>Biz bilan </h1>
             <Wrapper>
@@ -61,6 +63,7 @@ const Home = () => {
                 </Bottom>
             </Wrapper>
         </Container>
+        </Reveal>
     )
 }
 

@@ -13,13 +13,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <BrowserRouter>
+<<<<<<< HEAD
       <Provider store={store}>
         <QueryClientProvider client={query}>
           <Routers />
         </QueryClientProvider>
       </Provider>
     </BrowserRouter>
+=======
+      <QueryClientProvider client={query}>
+        <RouterSatbar/>
+      </QueryClientProvider>
+    </BrowserRouter> 
+>>>>>>> d7e6484232bf25e95462a529954e694959fdab36
   </>
+  
 );
 
 

@@ -8,7 +8,7 @@ const Routers =()=>{
         <div>
             <Routes>
                 <Route element={<Navbar/>}>
-                    {
+                        {
                         navbar.map(({id, element, path, hidden})=>{
                             return !hidden &&(
                                 <Route key={id} path={path} element={element}/>
