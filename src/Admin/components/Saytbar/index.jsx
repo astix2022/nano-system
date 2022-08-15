@@ -2,16 +2,16 @@ import React from 'react'
 import {saytbar} from '../../utils/saytbar'
 import {Container} from './style'
 import { Outlet,} from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 const Saytbar = () => {
   return (
     <div>
       <Container>
           {
-            saytbar.map(({id, title})=>{
+            saytbar.map(({id, title,path})=>{
               return(
-                <h2 key={id}>{title}</h2>
+                <NavLink key={id} to={path}>{title}</NavLink>
               )
             })
           }
