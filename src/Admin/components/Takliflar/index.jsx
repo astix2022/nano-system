@@ -1,8 +1,11 @@
 import React from 'react'
+import TableSection from './TableSection'
 
 const Takliflar = () => {
   return (
-    <div>Takliflar</div>
+    <div>
+      <TableSection/>
+    </div>
   )
 }
 

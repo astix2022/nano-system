@@ -19,8 +19,7 @@ const Wrapper = styled.div`
         margin-top: 23px;
     }
     .active{
-		color: #0152AE;
-        fill: #0152AE;
+		color: black;
 	}
     .wrap{
         display: flex;
@@ -28,10 +27,11 @@ const Wrapper = styled.div`
         gap: 8px;
         padding-left: 34px;    
     }
+    
 `
 
 const Result = styled.div`
-    width:100% ;
+    width:100%;
     background-color: #FAFAFA;
 `
 
@@ -40,6 +40,7 @@ const Link = styled(NavLink)`
     font-weight: 500;
     font-size: 16px;
     color: #9E9E9E;
+;
 `
 export
 {

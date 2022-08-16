@@ -1,8 +1,7 @@
 import React from 'react'
 import {saytbar} from '../../utils/saytbar'
 import { Outlet,} from 'react-router-dom';
-import { Container, Wrapper, Result, Link } from './style'
-import { NavLink } from 'react-router-dom';
+import { Container, Wrapper, Result, Link} from './style'
 
 
 const Saytbar = () => {
@@ -11,12 +10,11 @@ const Saytbar = () => {
       <Wrapper>
         <h1 className='logo'>LOGO</h1>
         {
-          saytbar.map(({ id, title, path, icon }) => {
+          saytbar.map(({ id, title, path, icon,}) => {
             return (
               <div className='wrap' key={id}>
-                <img className='icons' src={icon} alt="icon" />
-                <NavLink  to={path}>
-                    {title}</NavLink>
+                <img className='icons' src={icon}/>
+                <Link  to={path}>{title}</Link>
               </div>
             )
           })

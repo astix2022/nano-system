@@ -1,12 +1,12 @@
 import React from "react";
-import Saytbar from './Admin/RouterSaytbar'
-import Router from './routers'
 import {useNavigate} from 'react-router-dom'
+import Router from './routers'
+import RouterSaytbar from "./Admin/RouterSaytbar";
 
 const Root = () =>{
   const navigate = useNavigate()
     if(localStorage.getItem('role' === 'ceo')){
-      return <Saytbar/> && navigate('/dashboard')
+      return <RouterSaytbar/> && navigate('/dashboard')
     }
     else if(localStorage.getItem('role' === 'user')){
       return <Router/> && navigate('/asosiy')
