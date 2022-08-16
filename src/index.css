@@ -31,7 +31,6 @@ body {
   font-style: normal;
   font-weight: 600;
   font-size: 49px;
-  line-height: 59px;
   letter-spacing: 0.02em;
   color: #066ac9;
 }
@@ -41,7 +40,6 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 30px;
   color: #000000;
 }
 
@@ -50,7 +48,6 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
   letter-spacing: 0.02em;
   color: rgba(0, 0, 0, 0.5);
 }
