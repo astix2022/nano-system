@@ -1,18 +1,18 @@
-import React from "react";
-import {useNavigate} from 'react-router-dom'
-import Router from './routers'
+import React, { useEffect } from "react";
+import Router from "./routers";
 import RouterSaytbar from "./Admin/RouterSaytbar";
+import { useNavigate } from "react-router-dom";
 
-const Root = () =>{
-  const navigate = useNavigate()
-    if(localStorage.getItem('role' === 'ceo')){
-      return <RouterSaytbar/> && navigate('/dashboard')
-    }
-    else if(localStorage.getItem('role' === 'user')){
-      return <Router/> && navigate('/asosiy')
-    }
-    else{
-      return <Router/> && navigate('/asosiy')
-    }
-}
-export default Root
+const Root = () => {
+	const role = JSON.parse(localStorage.getItem("role"));
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!role) {
+			navigate("/signin");
+		}
+	}, []);
+	return role === "ceo" ? <RouterSaytbar /> : <Router />;
+};
+
+export default Root;

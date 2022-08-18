@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons, } from './style';
 import { Popover } from 'antd';
+import {useDispatch} from 'react-redux'
+import { logout } from '../../store/login';
+
 
 const Navbar = () => {
   const navigate = useNavigate()
   const [visible, setVisible] = useState(false);
+  const dispatch = useDispatch()
 
   const handleVisibleChange = (newVisible) => {
     setVisible(newVisible);
@@ -14,6 +18,7 @@ const Navbar = () => {
   function logOut (){
 		localStorage.clear()
 		navigate('/signin')
+    dispatch(logout())
 	}
   const Content = () =>{
     return (

@@ -29,7 +29,12 @@ export const getLogin = createAsyncThunk('login', async ({ login, password }, { 
 const loginSlice = createSlice({
     name: 'login',
     initialState: { data: [], status: '' },
-    reducers: {},
+    reducers: {
+        logout(state){
+            state.data = []
+            state.status = ''
+        }
+    },
     extraReducers: {
         [getLogin.pending]: (state, action) => {
             state.data = []
@@ -49,4 +54,5 @@ const loginSlice = createSlice({
     }
 })
 
+export const {logout} = loginSlice.actions
 export default loginSlice.reducer
