@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const Root = () => {
 	const role = JSON.parse(localStorage.getItem("role"));
 	const navigate = useNavigate();
-
 	useEffect(() => {
 		if (!role) {
 			navigate("/signin");

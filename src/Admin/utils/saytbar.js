@@ -7,13 +7,13 @@ import SinflarPage from '../pages/SinflarPage'
 import UstozlarPage from '../pages/UstozlarPage'
 import SozlamalarPage from '../pages/SozlamalarPage'
 import dash from "../../assets/icons/dash.svg";
+import ariza from "../../assets/icons/dash_arizalar.svg";
+import taklif from "../../assets/icons/dash_takliflar.svg";
 import yoqlama from "../../assets/icons/dash_yoqlama.svg";
 import chopetish from "../../assets/icons/dash_chopetish.svg";
 import sinflar from "../../assets/icons/dash_sinflar.svg";
 import ustozlar from "../../assets/icons/dash_ustozlar.svg";
 import settings from "../../assets/icons/dash_settings.svg";
-import ArizaSelect from '../GenericSelect/ArizaSelect/index'
-import TaklifSelect from '../GenericSelect/TaklifSelect'
 
 export const saytbar = [
     {
@@ -28,22 +28,24 @@ export const saytbar = [
     },
     {
         id:2,
-        title:<ArizaSelect/>,
+        title:'Arizalar',
         path:'/arizalar',
         element:<ArizaPage/>,
         search: '?',
         hidden: false,
         private:true,
+        icon: ariza,
 
     },
     {
         id:3,
-        title:<TaklifSelect/>,
+        title:'Takliflar',
         path:'/takliflar',
         element:<TakliflarPage/>,
         search: '?',
         hidden: false,
         private:true,
+        icon:taklif,
 
     },
     {

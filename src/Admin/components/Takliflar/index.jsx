@@ -1,12 +1,9 @@
 import React from 'react'
-import TableSection from './TableSection'
 
 const Takliflar = () => {
   return (
-    <div>
-      <TableSection/>
-    </div>
+    <div>Takliflar</div>
   )
-}
+} 
 
 export default Takliflar

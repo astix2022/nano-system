@@ -19,16 +19,15 @@ const Saytbar = () => {
       <Wrapper>
         <h1 className='logo'>LOGO</h1>
         {
-          saytbar.map(({ id, title, path, icon,}) => {
+          saytbar.map(({ id, title, path, icon}) => {
             return (
               <div className='wrap' key={id}>
-                <img className='icons' src={icon}/>
-                <Link  to={path}>{title}</Link>
+                <Link  to={path}><img className='icons' src={icon}/>{title}</Link>
               </div>
             )
           })
         }
-        <button onClick={logOut}>logout</button>
+        <button onClick={logOut} className='logOut'>logout</button>
       </Wrapper>
       <Result>
         <Outlet />

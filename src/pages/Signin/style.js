@@ -12,7 +12,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     padding: 30px 30px;
     width: 479px;
-    height: 497px;
+    height: fit-content;
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
     .title{
