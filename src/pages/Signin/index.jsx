@@ -11,26 +11,7 @@ const Signin = () => {
 
 	const dispatch = useDispatch();
 	const auth = useSelector((state) => state.auth);
-	// const store = useSelector((state) => state);
-
-	// const { mutate } = useMutation(
-	// 	() => {
-	// 		return fetch(`http://nano-system.5p-agency.uz/api/v1/users//login`, {
-	// 			method: "POST",
-	// 			headers: { "Content-type": "application/json" },
-	// 			body: JSON.stringify({ login: LoginRef.current.value, password: PwRef.current.value }),
-	// 		}).then((res) => res.json());
-	// 	},
-	// 	{
-	// 		onSuccess: (res) => {
-	// 			localStorage.setItem("token", res.token);
-	// 		},
-	// 		onError: (err) => {},
-	// 	}
-	// );
-
 	const OnSubmit = () => {
-		// mutate();
 		dispatch(
 			getLogin({
 				login: LoginRef.current.value,
