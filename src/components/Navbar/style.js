@@ -3,9 +3,17 @@ import  {NavLink}  from 'react-router-dom'
 import {ReactComponent as Search} from '../../assets/icons/search.svg'
 import {ReactComponent as Sun} from '../../assets/icons/sun.svg'
 import {ReactComponent as User} from '../../assets/icons/user-avatar.svg'
-
+import  {ReactComponent as user_profil} from '../../assets/icons/user_profil_icon.svg'
+import  {ReactComponent as user_qoshish} from '../../assets/icons/user_qoshish_icon.svg'
+import  {ReactComponent as user_chiqish} from '../../assets/icons/user_chiqish_icon.svg'
+import { Icon } from "../Profil/style";
 const Container = styled.div`
     width: 100%;
+
+	.active_back{
+		color: #3434FF;
+		cursor: pointer;
+	}
 `
 const Header = styled.header`
 	width: 100%;
@@ -72,6 +80,15 @@ const Icons = styled.div`
 Icons.Search = styled(Search)``
 Icons.Sun = styled(Sun)``
 Icons.User = styled(User)``
+Icons.Profil = styled(user_profil)`
+	cursor: pointer;
+`
+Icons.Qoshish = styled(user_qoshish)`
+	cursor: pointer;
+`
+Icons.Chiqish = styled(user_chiqish)`
+	cursor: pointer;
+`
 export
 {
     Container,

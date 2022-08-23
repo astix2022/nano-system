@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import { ReactComponent as user } from "../../assets/icons/profil_user.svg";
 import { ReactComponent as back } from "../../assets/icons/profil_back.svg";
-import { ReactComponent as ariza } from "../../assets/icons/profil_arizalar.svg";
-
 
 const Icon = styled.img``
-
 const Container = styled.div`
     width: 100%;
     height: fit-content;
@@ -24,11 +21,12 @@ const Nav = styled.div`
         display: flex;
         align-items: center;
         gap: 5px;
+        cursor: pointer;
     }
     
     .nav_back{
-        font-weight: 400;
-        font-size: 18px;
+        font-weight: 500;
+        font-size: 16px;
         color: #3A3A3A;
     }
     `

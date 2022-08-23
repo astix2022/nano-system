@@ -7,7 +7,7 @@ import SinflarPage from '../pages/SinflarPage'
 import UstozlarPage from '../pages/UstozlarPage'
 import SozlamalarPage from '../pages/SozlamalarPage'
 import dash from "../../assets/icons/dash.svg";
-import arizalar from "../../assets/icons/dash_arizalar.svg";
+import ariza from "../../assets/icons/dash_arizalar.svg";
 import taklif from "../../assets/icons/dash_takliflar.svg";
 import yoqlama from "../../assets/icons/dash_yoqlama.svg";
 import chopetish from "../../assets/icons/dash_chopetish.svg";
@@ -34,7 +34,8 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-        icon: arizalar,
+        icon: ariza,
+
     },
     {
         id:3,
@@ -44,7 +45,8 @@ export const saytbar = [
         search: '?',
         hidden: false,
         private:true,
-        icon: taklif,
+        icon:taklif,
+
     },
     {
         id:4,

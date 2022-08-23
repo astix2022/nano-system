@@ -3,6 +3,7 @@ import TaklifPage from '../pages/TaklifPage'
 import ArizaPage from '../pages/ArizaPage'
 import AloqaPage from '../pages/AloqaPage'
 import Signin from '../pages/Signin'
+import Profil from '../components/Profil'
 // import { ReactComponent as Icon } from '../assets/'
 
 export const navbar = [
@@ -49,6 +50,16 @@ export const navbar = [
         title:'Signin',
         path:'/signin',
         element:<Signin/>,
+        search: '?',
+        hidden: true,
+        private:true,
+
+    },
+    {
+        id:6,
+        title:'Profil',
+        path:'/profil',
+        element:<Profil/>,
         search: '?',
         hidden: true,
         private:true,

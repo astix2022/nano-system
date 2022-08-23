@@ -3,13 +3,21 @@ import { Container, Nav, Wrapper, WrapTop, WrapBottom, List, Card, Icon, CardTit
 import Table from './Table'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
+import {useNavigate } from 'react-router-dom';
+
 const Profil = () => {
+  const navigate = useNavigate()
+
+
+    const Submit = ()=>{
+        navigate('/asosiy')
+      }
     return (
         <Container>
             <Nav>
-                <div className='nav_wrap'>
-                    <Icon.Back />
-                    <span className='nav_back'>Profil</span>
+                <div onClick={Submit} className='nav_wrap'>
+                    <Icon.Back  />
+                    <span className='nav_back'>Chiqish</span>
                 </div>
             </Nav>
             <Fade>

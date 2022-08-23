@@ -4,6 +4,6 @@ const Takliflar = () => {
   return (
     <div>Takliflar</div>
   )
-}
+} 
 
 export default Takliflar

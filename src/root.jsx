@@ -1,14 +1,17 @@
-import React from "react";
-import Saytbar from './Admin/RouterSaytbar'
-import Router from './routers'
+import React, { useEffect } from "react";
+import Router from "./routers";
+import RouterSaytbar from "./Admin/RouterSaytbar";
+import { useNavigate } from "react-router-dom";
 
-const count = 5
-const Root = () =>{
-    if(count === 5){
-      return  <Router/>
-    }
-    else if (count === 6){
-       return <Saytbar/>
-    }
-}
-export default Root
+const Root = () => {
+	const role = JSON.parse(localStorage.getItem("role"));
+	const navigate = useNavigate();
+	useEffect(() => {
+		if (!role) {
+			navigate("/signin");
+		}
+	}, []);
+	return role === "ceo" ? <RouterSaytbar /> : <Router />;
+};
+
+export default Root;

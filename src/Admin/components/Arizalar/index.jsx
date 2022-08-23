@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {Container} from './style'
+import Table from './table'
 
 const Arizalar = () => {
+
   return (
-    <div>Arizalar</div>
+    <Container>
+      hello
+    </Container>
   )
 }
 
