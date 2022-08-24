@@ -80,21 +80,35 @@ input{
 }
 
 input:focus{
+<<<<<<< HEAD
     outline: none;
     box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); 
+=======
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4);    
+>>>>>>> 3806a2e0ea6e67e3e1f2cfea23a3ea20c268e4c3
 }
-
 textarea{
   outline: none;
   resize: none;
 }
 
 textarea:focus{
+<<<<<<< HEAD
+=======
+  outline: none;
+>>>>>>> 3806a2e0ea6e67e3e1f2cfea23a3ea20c268e4c3
   box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); 
 }
 
 button{
   cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
 }
 
 button:active{

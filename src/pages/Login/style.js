@@ -21,7 +21,7 @@ const Reg = styled.div`
   width: 50%;
 `;
 
-const Wrapper = styled.form`
+const Wrapper = styled.div`
   width: 500px;
   height: 535.48px;
   background: #ffffff;
@@ -43,80 +43,28 @@ const Title = styled.div`
   margin-bottom: 60px;
 `;
 
-const App = styled.div``;
+const App = styled.div`
+
+`;
 
 App.Inp = styled.div`
-  .text {
+  .input{
     display: flex;
-    align-items: center;
-    padding: 0 3px;
-    position: absolute;
-    color: #9e9e9e;
-    left: 140px;
-    top: 281px;
-    background-color: white;
-    font-size: 18px;
-    transition: all 0.1s linear;
-  }
-  #texto{
-    top: 253px;
-    color: black;
-    font-size: 16px;
-  }
-  .text1 {
-    display: flex;
-    align-items: center;
-    padding: 0 3px;
-    position: absolute;
-    color: #9e9e9e;
-    left: 140px;
-    top: 361px;
-    background-color: white;
-    font-size: 18px;
-    transition: all 0.1s linear;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 13px 24px 12px;
+    gap: 10px;
+    top: 29.42%;
+    bottom: 49.19%;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 23px;
+    font-size: 20px;
   }
 `;
 
-const Input = styled.input`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 13px 24px 12px;
-  gap: 10px;
-  top: 29.42%;
-  bottom: 49.19%;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  width: 100%;
-  margin-bottom: 23px;
-  font-size: 20px;
-  :focus ~ .text {
-    top: 253px;
-    color: black;
-    font-size: 16px;
-  }
-`;
-const Input1 = styled.input`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 13px 24px 12px;
-  gap: 10px;
-  top: 29.42%;
-  bottom: 49.19%;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  width: 100%;
-  margin-bottom: 23px;
-  font-size: 20px;
-  :focus ~ .text1 {
-    top: 334px;
-    color: black;
-    font-size: 16px;
-  }
-`;
 
 const Button = styled.button`
   background: #1e5dfe;
@@ -128,4 +76,4 @@ const Button = styled.button`
   margin-top: 30px;
 `;
 
-export { Container, Reg, Wrapper, Button, Title, App, Input1, Input };
+export { Container, Reg, Wrapper, Button, Title, App};

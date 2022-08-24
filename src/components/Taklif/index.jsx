@@ -23,7 +23,8 @@ const Taklif = () => {
 		},
     {
       onSuccess: (res) => {
-        // console.log(res);
+        // console.log(res);   
+      console.log( res.ok === true ? 'xabaringiz yuborildi' : 'getmadi krc')
       },
       onError: (err) => {}
     }
@@ -36,7 +37,6 @@ const Taklif = () => {
     <Reveal>
     <div className="block-center">
       <Container>
-        {result}
         <Wrapper>
           <Title>
             <div className="title">
