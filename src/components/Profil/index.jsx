@@ -20,6 +20,7 @@ const Profil = () => {
                     <span className='nav_back'>Chiqish</span>
                 </div>
             </Nav>
+            
             <Fade>
                 <Wrapper>
                     {/* WrapTop */}

@@ -4,7 +4,6 @@ import ArizaPage from '../pages/ArizaPage'
 import AloqaPage from '../pages/AloqaPage'
 import Signin from '../pages/Signin'
 import Profil from '../components/Profil'
-// import { ReactComponent as Icon } from '../assets/'
 
 export const navbar = [
     {
@@ -63,7 +62,6 @@ export const navbar = [
         search: '?',
         hidden: true,
         private:true,
-
     },
     
 ]

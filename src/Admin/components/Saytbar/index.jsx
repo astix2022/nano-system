@@ -19,8 +19,8 @@ const Saytbar = () => {
       <Wrapper>
         <h1 className='logo'>LOGO</h1>
         {
-          saytbar.map(({ id, title, path, icon}) => {
-            return (
+          saytbar.map(({ id, title, path, icon,hidden}) => {
+            return !hidden && (
               <div className='wrap' key={id}>
                 <Link  to={path}><img className='icons' src={icon}/>{title}</Link>
               </div>
