@@ -1,10 +1,13 @@
 import React,{useState} from 'react'
 import { Container, Settings, TableSection, Wrapper,Icon,Categories } from './style'
 import { useQuery } from 'react-query'
+import { useNavigate } from 'react-router-dom'
 import ListCard from './ListCard'
 
 const Takliflar = () => {
   const [data, setData] = useState([])
+  const navigate = useNavigate()
+
   useQuery(['get started', data], () => {
     return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestions`).then(res => res.json())
   },
@@ -13,7 +16,28 @@ const Takliflar = () => {
         setData(res?.suggestions || []);
       }
     })
-  console.log(data);
+
+function delateId (id){
+  fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestion/${id}`,{
+    method: 'DELETE',
+    redirect: 'follow'
+  }).then((res)=>{
+    res.json().then((resp)=>{
+      console.log(resp);
+    })
+  })
+}
+function delateAll (){
+  fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestions`,{
+    method: 'DELETE',
+    redirect: 'follow'
+  }).then((res)=>{
+    res.json().then((resp)=>{
+      console.log(resp);
+    }) 
+  })
+  alert('ochirildi')
+}
   return (
     <Container>
         <Wrapper>
@@ -43,10 +67,11 @@ const Takliflar = () => {
             {
               data.map((value) => {
                 return(
-                  <ListCard key={value?.id} info={value}/> 
+                    <ListCard key={value?.id} info={value} onClick={()=> delateId(value?.id)}/>
                   )
                 })
-              }
+            }
+            <button onClick={()=> delateAll()}>all delate</button>
           </TableSection>
         </Wrapper>
     </Container>
