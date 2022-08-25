@@ -8,7 +8,7 @@ const Container =styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 5px 0;
     height: fit-content;
     .idraqam{
         width: 20%;
@@ -96,7 +96,7 @@ const ClickComponent = styled.div`
             color: #3A3A3A;
         }
     }
-    .button{
+    .card_button{
         display: flex;
         align-items: center;
         justify-content: flex-end;
