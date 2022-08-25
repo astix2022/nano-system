@@ -6,7 +6,7 @@ const Container = styled.div`
 `;
 
 const Cards = styled.div`
-  margin: 24px;
+  margin: 50px;
 `;
 
 const Card = styled.div`
@@ -31,14 +31,14 @@ const Fonts = styled.div``;
 Fonts.Title = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 27px;
+  font-size: 22px;
   line-height: 38px;
 `;
 Fonts.SubTitle = styled.div`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 42px;
   color: #3a3a3a;
 `;

@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import NavDash from "../NavDashboard";
 import UsersT from "./UsersT";
+import { useMutation } from "react-query";
 import {
   Button,
   Card,
@@ -18,10 +19,10 @@ import {
   ExitIcon,
   AddButton,
 } from "./style";
-import Table from "./UsersT";
 
 export let obj = [
   {
+    id:1,
     ismFamilya: "",
     login: "",
     parol: "",
@@ -34,6 +35,29 @@ const Sozlamalar = () => {
   const loginRef = useRef("");
   const passwordRef = useRef("");
   const roleRef = useRef("");
+  const { mutate } = useMutation(
+    "started",
+    () => {
+      fetch("", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          fullname: nameRef.current.value,
+          login: loginRef.current.value,
+          password: passwordRef.current.value,
+          role: roleRef.current.value,
+        }),
+      }).then((res) => res.json());
+    },
+    {
+      onSuccess: (res) => {
+        console.log("====================================");
+        console.log(res ? "yuborildi" : "yuborilmadi");
+        console.log("====================================");
+      },
+    }
+  );
+
   const submit = () => {
     if (item === false) {
       setItem(!false);
@@ -42,6 +66,7 @@ const Sozlamalar = () => {
     }
   };
   const add = () => {
+    mutate();
     obj = [
       {
         ismFamilya: nameRef.current.value,
@@ -50,7 +75,6 @@ const Sozlamalar = () => {
         role: roleRef.current.value,
       },
     ];
-    console.log(obj);
     if (item === false) {
       setItem(!false);
     } else if (item === true) {
