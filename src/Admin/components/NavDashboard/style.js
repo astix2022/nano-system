@@ -5,8 +5,7 @@ import { ReactComponent as wa } from "../../../assets/icons/Wallet.svg";
 
 const Container = styled.div`
   margin-left: 24px;
-  margin-top: 30px;
-  /* border: 1px solid black; */
+  margin-top: 25px;
 `;
 
 const Wrapper = styled.div`
