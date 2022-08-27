@@ -20,43 +20,33 @@ import {
   AddButton,
 } from "./style";
 
-export let obj = [
-  {
-    id:1,
-    ismFamilya: "",
-    login: "",
-    parol: "",
-    role: "",
-  },
-];
 const Sozlamalar = () => {
   const [item, setItem] = useState(false);
   const nameRef = useRef("");
   const loginRef = useRef("");
   const passwordRef = useRef("");
   const roleRef = useRef("");
-  const { mutate } = useMutation(
-    "started",
-    () => {
-      fetch("", {
-        method: "POST",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({
-          fullname: nameRef.current.value,
-          login: loginRef.current.value,
-          password: passwordRef.current.value,
-          role: roleRef.current.value,
-        }),
-      }).then((res) => res.json());
+
+  const {mutate} = useMutation(()=>{
+    return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/set/login`,{method:'POST',headers:{'Content-type':'application/json'},
+    body:JSON.stringify({fullname:nameRef.current.value, login:loginRef.current.value, password:passwordRef.current.value,role:roleRef.current.value})}) 
+    .then(res=>res.json) 
+  },
+  {
+    onSuccess:(res)=>{
+      
     },
-    {
-      onSuccess: (res) => {
-        console.log("====================================");
-        console.log(res ? "yuborildi" : "yuborilmadi");
-        console.log("====================================");
-      },
+    onError: (err)=>{
+
     }
-  );
+  })
+  const add = () => {
+    mutate();
+    console.log(nameRef.current.value);
+    console.log(loginRef.current.value);
+    console.log(passwordRef.current.value);
+    console.log(roleRef.current.value);
+  };
 
   const submit = () => {
     if (item === false) {
@@ -65,22 +55,7 @@ const Sozlamalar = () => {
       setItem(!true);
     }
   };
-  const add = () => {
-    mutate();
-    obj = [
-      {
-        ismFamilya: nameRef.current.value,
-        login: loginRef.current.value,
-        parol: passwordRef.current.value,
-        role: roleRef.current.value,
-      },
-    ];
-    if (item === false) {
-      setItem(!false);
-    } else if (item === true) {
-      setItem(!true);
-    }
-  };
+
   const Component = (
     <Container>
       <Wrapper>
@@ -111,10 +86,10 @@ const Sozlamalar = () => {
             />
             <select className="input select" ref={roleRef}>
               <option placeholder="Role" className="option">
-                User
+                user
               </option>
               <option placeholder="Role" className="option">
-                O’qituvchi
+                ceo
               </option>
             </select>
           </InpBox>

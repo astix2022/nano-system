@@ -6,15 +6,32 @@ const Container = styled.div`
     padding: 0 40px;
 `
 const Wrapper = styled.div`
+    margin-top:25px;
     width: 100%;
     height: 100%;
     padding:25px 25px;
-    border: 1px solid red;
     background-color: #ffffff;
     border-radius: 15px;
 
 `
-const TableSection =  styled.div``
+const TableSection =  styled.div`
+    .btn_alldelate{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 25px;
+        background: #1E5DFE;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+`
 const Settings =  styled.div`
     .sub-title{
         display: flex;
@@ -72,6 +89,7 @@ const Settings =  styled.div`
         margin: 24px 0;
         background-color: #E6E6E6;
     }
+
 `
 const Icon = styled.span``
 Icon.Chart = styled(chart)`
@@ -97,6 +115,9 @@ const Categories = styled.div`
     .read{
         display: flex;
         justify-content: flex-start;
+    }
+    .ismFamilya{
+        width: 30%;
     }
  
 `

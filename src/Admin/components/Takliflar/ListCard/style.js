@@ -14,7 +14,7 @@ const Container =styled.div`
         width: 20%;
     }
     .ismFamilya{
-        width: 20%;
+        width: 30%;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -48,6 +48,22 @@ const Container =styled.div`
         color: #ffffff;
         gap: 10px;
         width: 45px;
+        height: 22px;
+        background: #1E5DFE;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    .btn_delate{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 60px;
         height: 22px;
         background: #1E5DFE;
         border: 1px solid #FFFFFF;

@@ -29,7 +29,7 @@ const ListCard = ({info,onClick}) => {
       <Item className='taklifNomi'>{info?.suggestName || 'Taklif nomi '}</Item>
       <Item className='sana'>13.07.2022</Item>
       <Item className='button'><button className='btn' onClick={onSubmit}>Click</button></Item>
-      <button onClick={onClick}>delate</button>
+      <div className='button' ><button  className='btn_delate' onClick={onClick}>delate</button></div>
       {state === true ?  Component : null}
     </Container>
   )

@@ -1,13 +1,11 @@
 import React,{useState} from 'react'
 import { Container, Settings, TableSection, Wrapper,Icon,Categories } from './style'
 import { useQuery } from 'react-query'
-import { useNavigate } from 'react-router-dom'
 import ListCard from './ListCard'
+import NavDashboard from '../NavDashboard'
 
 const Takliflar = () => {
   const [data, setData] = useState([])
-  const navigate = useNavigate()
-
   useQuery(['get started', data], () => {
     return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestions`).then(res => res.json())
   },
@@ -16,7 +14,6 @@ const Takliflar = () => {
         setData(res?.suggestions || []);
       }
     })
-
 function delateId (id){
   fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestion/${id}`,{
     method: 'DELETE',
@@ -40,6 +37,7 @@ function delateAll (){
 }
   return (
     <Container>
+        <NavDashboard info={'Takliflar'}/>
         <Wrapper>
           <Settings>
             <div className='title'>
@@ -58,10 +56,11 @@ function delateAll (){
           </Settings>
           <Categories>
             <div className='idraqam'>ID raqam</div>
-            <div>Ism Familiya</div>
+            <div className='ismFamilya'>Ism Familiya</div>
             <div>Taklid nomi</div>
             <div>Sana</div>
             <div className='read'>Taklifni o’qish</div>
+            <div>O'chrish</div>
           </Categories>
           <TableSection>
             {
@@ -71,11 +70,10 @@ function delateAll (){
                   )
                 })
             }
-            <button onClick={()=> delateAll()}>all delate</button>
+            <button className='btn_alldelate' onClick={()=> delateAll()}>all delate</button>
           </TableSection>
         </Wrapper>
     </Container>
   )
 }
-
 export default Takliflar
