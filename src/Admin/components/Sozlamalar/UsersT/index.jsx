@@ -47,7 +47,7 @@ const UsersT = () => {
                   <div className="tit">123</div>
                   <div className="tit">{ismFamilya}</div>
                   <div className="tit blue">{login}</div>
-                  <div className="tit">{parol}</div>
+                  <div className="tit" title={parol}>********</div>
                   <div className="tit">{role}</div>
                   <button className="editBtn">Ochirish</button>
                 </TabelCard>
