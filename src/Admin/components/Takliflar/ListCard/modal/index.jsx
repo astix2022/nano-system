@@ -10,7 +10,6 @@ const madal = ({active,title}) => {
         <hr />
         <div className='click'><button onClick={()=> active(false)}>ko'rib chiqildi</button></div>
       </div>
-
     </Container>
   )
 }
