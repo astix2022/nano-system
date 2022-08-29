@@ -1,31 +1,22 @@
 import styled from "styled-components";
 import { ReactComponent as sending} from "../../../../assets/icons/sending.svg";
 
-const Container = styled.div`
+const Container = styled.div`   
     width: 100%;
     height: 100vh;
-    padding: 100px 100px 0px 100px;
-
+    margin-top: 10px;
+    padding: 30px 40px;
     .steps{
         width: 100%;
     }
 
-    .steps-content {
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    background-color: #fafafa;
-    /* border: 1px dashed #e9e9e9; */
-    border-radius: 2px;
-    }
-
-    .steps-action {
-    margin-top: 24px;
+    .buttuns{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
     }
 `
+
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -82,4 +73,13 @@ const Inputs = styled.div`
         padding: 10px 20px 0px 20px;
     }
 `
-export {Container,Wrapper,Sending,Icon,Inputs}
+const Button = styled.button`
+    width: 150px;
+    height: 40px;
+    background: #3434FF;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+`
+export {Container,Wrapper,Sending,Icon,Inputs,Button}

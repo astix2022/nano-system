@@ -1,26 +1,31 @@
 import {  createSlice, createAsyncThunk  } from '@reduxjs/toolkit'
 
-export const getPost = createAsyncThunk('post', async ()=>{
-    return fetch ('',{method:'POST'})
-    .then(res=>res.jso())
+export const Post = createAsyncThunk('post', async ({image,title,message})=>{
+    return fetch ('http://nano-system.5p-agency.uz/api/v1/ceo/news',
+    {
+        method:'POST',
+        headers:{'Content-type':'application/json'},
+        body:JSON.stringify({image,title,message})
+    }
+    )
+    .then(res=>res.json())
 })
 
 
-const postSlice = createSlice({
+const chopEtishSlice = createSlice({
     name:'post',
     initialState:{data:[],status:''},
     extraReducers:{
-        [getPost.pending]:(state,action)=>{
+        [Post.pending]:(state)=>{
             state.status = 'pending'
         },
-        [getPost.rejected]:(state,action)=>{
+        [Post.rejected]:(state)=>{
             state.status = 'erorr'
         },
-        [getPost.fulfilled]:(state,action)=>{
+        [Post.fulfilled]:(state)=>{
             state.status = 'success'
         }
-
     }
 })
 
-export default postSlice.reducer
+export default chopEtishSlice.reducer

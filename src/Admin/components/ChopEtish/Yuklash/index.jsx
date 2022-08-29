@@ -1,33 +1,30 @@
-import React,{useRef} from "react";
-import { Container, Wrapper ,Icon,Sending,Inputs} from "./style";
-import {useMutation} from 'react-query'
+import React,{useRef,useState} from "react";
+import { Container, Wrapper ,Icon,Sending,Inputs,Button} from "./style";
+import {Post} from '../../../../store/chopetish'
+import { useDispatch,useSelector} from "react-redux";
 
 
 const Yuklash = () => {
+  const [state, setState] = useState(true)
   const imageRef = useRef("");
   const titleRef = useRef("");
   const messageRef = useRef("");
-  const { mutate } = useMutation(
-    () => {
-      return fetch("http://nano-system.5p-agency.uz/api/v1/ceo/news", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body:JSON.stringify({
-          image: imageRef.current.value,
-          title: titleRef.current.value,
-          message: messageRef.current.value,
-        }),
-      }).then((res) => res.json());
-    },
-    {
-      onSucces: (res) => {
-       console.log(res);
-      },
-    }
-  );
-  const onSubmit = () => {
-    mutate();
-  };
+  const dispatch = useDispatch()
+  const loading = useSelector((store)=> store.post)
+
+// submit
+  const OnSubmit = () => {
+		dispatch(
+			Post({
+				image: imageRef.current.value,
+				title: titleRef.current.value,
+			  message: messageRef.current.value
+			})
+		);
+    if(state === true) return setState(!true)
+    else if(state === false) return setState(!false)
+	};
+
   return (
     <Container>
       <Wrapper>
@@ -42,14 +39,18 @@ const Yuklash = () => {
         <form>
         <input className='input_name' placeholder='Nomi(Majburiy)' type="text" ref={titleRef}/>
         <textarea className='tex_name' placeholder='Tavsifi' cols="30" rows="10" ref={messageRef}></textarea>
-        <button onClick={onSubmit}>chop etish</button>
       </form>
         </Inputs>
       </Wrapper>
+      <div className="buttuns">
+      <Button onClick={OnSubmit} className={state ? 'active' : 'nonActive'}>Chop etish</Button>
+      {loading.status === 'pending' && 'Loading...'}
+      {loading.status === 'success' && 'Xabaringiz muvofaqiyatli yuborildi'}
+      {loading.status === 'error' && 'Xabaringiz yuborilmadi'}
+      </div>
     </Container>
   );
 };
-
 export default Yuklash;
 
 
