@@ -1,13 +1,12 @@
-import React,{useState} from "react";
-import { useQuery } from "react-query";
+import React,{useEffect} from "react";
 import Card from './Card'
+import {useDispatch, useSelector} from 'react-redux'
+import { getLogin } from "../../../../store/getLogin";
 import {
   Container,
   Header,
   Search,
   SubTitle,
-  TabelContainer,
-  TableTop,
   Title,
   TitleBox,
   TodayButton,
@@ -15,30 +14,33 @@ import {
 } from "./style";
 
 const UsersT = () => {
-  const [data,setData] =useState([]) 
-  useQuery(['get started', data],()=>{
-   return fetch('http://nano-system.5p-agency.uz/api/v1/ceo/logins').then(response => response.json())
-  },
-  {
-    onSuccess:(response)=>{
-      setData(response?.logins || []);
-    }
-  })
-  
- console.log(data)
+  const dispatch = useDispatch()
+  const data = useSelector((store) => store?.getLogin?.data);
+  console.log(data);
+  useEffect(()=>{
+    dispatch(getLogin());
+  },[])
   return (
     <Container>
       <Header>
-        <Title>Qo’shilgan foydalanuvchilar</Title>
+        <Title>Qo'shilgan foydalanuvchilar</Title>
         <TitleBox>
           <Wrapper>
-            <SubTitle>{data.length} ta</SubTitle>
+            <SubTitle>0 ta</SubTitle>
             <TodayButton>Today</TodayButton>
           </Wrapper>
           <Search placeholder="Search" type={"text"} />
         </TitleBox>
-        <div className="line"> </div>
+        <div className="line"></div>
       </Header>
+      {
+        data?.map(()=>{
+          return(
+            <div></div>
+          )
+        })
+      }
+      {/* <Card/> */}
     </Container>
   );
 };

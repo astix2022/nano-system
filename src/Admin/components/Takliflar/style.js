@@ -3,7 +3,7 @@ import { ReactComponent as chart } from "../../../assets/icons/Chart.svg"
 
 const Container = styled.div`
     width: 100%;
-    padding: 0 40px;
+    padding: 10px 40px;
 `
 const Wrapper = styled.div`
     margin-top: 15px;

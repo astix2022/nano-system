@@ -13,19 +13,24 @@ const Card = ({ value }) => {
     }
 
   }
-  // for (let i in value.password.length){
-  //   console.log(i);
-  // }
+  function changeRole() {
+    if (role === "****") {
+      setRole(value.role);
+    } else if (role === value.role) {
+      setRole("****");
+    }
+  }
+
     return (
       <Container>
         <TabelCard>
-          <div className="tit">{value.id}</div>
-          <div className="tit">{value.fullname}</div>
-          <div className="tit blue">{value.login}</div>
+          <div className="tit">{value?.id || '111'}</div>
+          <div className="tit">{value?.fullname || 'shoxrux maqsudov'}</div>
+          <div className="tit blue">{value?.login || 'shoxrux'}</div>
           <div className="tit pointer" onClick={changePass}>
             {pass}
           </div>
-          <div className="pointer" title={value.role}>
+          <div className="pointer" onClick={changeRole} title={value?.role}>
             {role}
           </div>
         </TabelCard>

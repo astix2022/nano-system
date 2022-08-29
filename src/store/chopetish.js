@@ -2,7 +2,7 @@ import {  createSlice, createAsyncThunk  } from '@reduxjs/toolkit'
 
 export const getPost = createAsyncThunk('post', async ()=>{
     return fetch ('',{method:'POST'})
-    .then(res=>res.jso())
+    .then(res => res.json())
 })
 
 

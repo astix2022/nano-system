@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 0px;
+  padding: 10px 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
 `;
 
 const Wrapper = styled.div`
@@ -10,12 +12,12 @@ const Wrapper = styled.div`
   width: fit-content;
 `;
 const Header = styled.div`
-  padding: 20px 30px;
+  padding: 20px 0px;
   .line {
     width: 100%;
     height: 0px;
     border: 1px solid #e6e6e6;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 `;
 
@@ -65,6 +67,7 @@ const TabelContainer = styled.div`
 const TableTop = styled.div`
   display: flex;
   height: 50px;
+  padding: 0 30px;
   .tit {
     width: 220px;
     font-style: normal;
