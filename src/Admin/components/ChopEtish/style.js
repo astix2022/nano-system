@@ -7,7 +7,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 10px 40px;
 `
 
 const Wrapper = styled.div`
@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     gap: 24px;
+    margin-top: 100px;
 `
 
 const Card = styled.div`

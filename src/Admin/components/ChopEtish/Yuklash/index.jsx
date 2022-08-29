@@ -1,70 +1,56 @@
-import React, { useState } from 'react';
-import { Container } from './style'
-import { Button, message, Steps } from 'antd';
-import Photo from './Photo/index'
-import Sarlavha from './Sarlavha/index'
-import Bolim from './Bolim/index'
-const { Step } = Steps;
-const steps = [
-  {
-    title: 'First',
-    content: <Photo/>,
-  },
-  {
-    title: 'Second',
-    content: <Sarlavha/>,
-  },
-  {
-    title: 'Last',
-    content: <Bolim/>,
-  },
-];
+import React,{useRef,useState} from "react";
+import { Container, Wrapper ,Icon,Sending,Inputs,Button} from "./style";
+import {Post} from '../../../../store/chopetish'
+import { useDispatch,useSelector} from "react-redux";
+
 
 const Yuklash = () => {
-  const [current, setCurrent] = useState(0);
+  const [state, setState] = useState(true)
+  const imageRef = useRef("");
+  const titleRef = useRef("");
+  const messageRef = useRef("");
+  const dispatch = useDispatch()
+  const loading = useSelector((store)=> store.post)
 
-  const next = () => {
-    setCurrent(current + 1);
-  };
+// submit
+  const OnSubmit = () => {
+		dispatch(
+			Post({
+				image: imageRef.current.value,
+				title: titleRef.current.value,
+			  message: messageRef.current.value
+			})
+		);
+    if(state === true) return setState(!true)
+    else if(state === false) return setState(!false)
+	};
 
-  const prev = () => {
-    setCurrent(current - 1);
-  };
   return (
     <Container>
-      <div className='steps'>
-      <Steps current={current}>
-        {steps.map((item) => (
-          <Step key={item.title} title={item.title} />
-        ))}
-      </Steps>
-      <div className="steps-content">{steps[current].content}</div>
-      <div className="steps-action">
-
-      {current > 0 && (
-          <Button
-            style={{
-              margin: '0 8px',
-            }}
-            onClick={() => prev()}
-          >
-            Oldingi
-          </Button>
-        )}
-        {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Yuklash muofaqiyatli amalga oshrildi!')}>
-            Yuklash
-          </Button>
-        )}
-          {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Keyingi
-          </Button>
-        )}
+      <Wrapper>
+        <Sending>
+          <input className="input_file" id="file" type="file" ref={imageRef}/>
+          <label className="label_wrap" htmlFor="file">
+            <Icon.Sending />
+            <span className="label_title">Yuborish</span>
+          </label>
+        </Sending>
+        <Inputs>
+        <form>
+        <input className='input_name' placeholder='Nomi(Majburiy)' type="text" ref={titleRef}/>
+        <textarea className='tex_name' placeholder='Tavsifi' cols="30" rows="10" ref={messageRef}></textarea>
+      </form>
+        </Inputs>
+      </Wrapper>
+      <div className="buttuns">
+      <Button onClick={OnSubmit} className={state ? 'active' : 'nonActive'}>Chop etish</Button>
+      {loading.status === 'pending' && 'Loading...'}
+      {loading.status === 'success' && 'Xabaringiz muvofaqiyatli yuborildi'}
+      {loading.status === 'error' && 'Xabaringiz yuborilmadi'}
       </div>
-    </div>
     </Container>
-  )
-}
+  );
+};
+export default Yuklash;
 
-export default Yuklash
+

@@ -15,6 +15,7 @@ import sinflar from "../../assets/icons/dash_sinflar.svg";
 import ustozlar from "../../assets/icons/dash_ustozlar.svg";
 import settings from "../../assets/icons/dash_settings.svg";
 import Yuklash from '../components/ChopEtish/Yuklash'
+import Yuklanganlar from '../components/ChopEtish/Yuklanganlar'
 
 export const saytbar = [
     {
@@ -104,6 +105,15 @@ export const saytbar = [
         title:'Yuklash',
         path:'/chopEtish/yuklash',
         element:<Yuklash/>,
+        search: '?',
+        hidden: true,
+        private:true,
+    },
+    {
+        id:10,
+        title:'Yuklanganlar',
+        path:'/chopEtish/yuklanganlar',
+        element:<Yuklanganlar/>,
         search: '?',
         hidden: true,
         private:true,
