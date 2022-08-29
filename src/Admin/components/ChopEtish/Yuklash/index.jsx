@@ -1,70 +1,55 @@
-import React, { useState } from 'react';
-import { Container } from './style'
-import { Button, message, Steps } from 'antd';
-import Photo from './Photo/index'
-import Sarlavha from './Sarlavha/index'
-import Bolim from './Bolim/index'
-const { Step } = Steps;
-const steps = [
-  {
-    title: 'First',
-    content: <Photo/>,
-  },
-  {
-    title: 'Second',
-    content: <Sarlavha/>,
-  },
-  {
-    title: 'Last',
-    content: <Bolim/>,
-  },
-];
+import React,{useRef} from "react";
+import { Container, Wrapper ,Icon,Sending,Inputs} from "./style";
+import {useMutation} from 'react-query'
+
 
 const Yuklash = () => {
-  const [current, setCurrent] = useState(0);
-
-  const next = () => {
-    setCurrent(current + 1);
-  };
-
-  const prev = () => {
-    setCurrent(current - 1);
+  const imageRef = useRef("");
+  const titleRef = useRef("");
+  const messageRef = useRef("");
+  const { mutate } = useMutation(
+    () => {
+      return fetch("http://nano-system.5p-agency.uz/api/v1/ceo/news", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body:JSON.stringify({
+          image: imageRef.current.value,
+          title: titleRef.current.value,
+          message: messageRef.current.value,
+        }),
+      }).then((res) => res.json());
+    },
+    {
+      onSucces: (res) => {
+       console.log(res);
+      },
+    }
+  );
+  const onSubmit = () => {
+    mutate();
   };
   return (
     <Container>
-      <div className='steps'>
-      <Steps current={current}>
-        {steps.map((item) => (
-          <Step key={item.title} title={item.title} />
-        ))}
-      </Steps>
-      <div className="steps-content">{steps[current].content}</div>
-      <div className="steps-action">
-
-      {current > 0 && (
-          <Button
-            style={{
-              margin: '0 8px',
-            }}
-            onClick={() => prev()}
-          >
-            Oldingi
-          </Button>
-        )}
-        {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Yuklash muofaqiyatli amalga oshrildi!')}>
-            Yuklash
-          </Button>
-        )}
-          {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Keyingi
-          </Button>
-        )}
-      </div>
-    </div>
+      <Wrapper>
+        <Sending>
+          <input className="input_file" id="file" type="file" ref={imageRef}/>
+          <label className="label_wrap" htmlFor="file">
+            <Icon.Sending />
+            <span className="label_title">Yuborish</span>
+          </label>
+        </Sending>
+        <Inputs>
+        <form>
+        <input className='input_name' placeholder='Nomi(Majburiy)' type="text" ref={titleRef}/>
+        <textarea className='tex_name' placeholder='Tavsifi' cols="30" rows="10" ref={messageRef}></textarea>
+        <button onClick={onSubmit}>chop etish</button>
+      </form>
+        </Inputs>
+      </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Yuklash
+export default Yuklash;
+
+
