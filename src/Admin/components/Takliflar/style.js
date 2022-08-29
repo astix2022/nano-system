@@ -69,7 +69,7 @@ const Settings =  styled.div`
             border-radius: 8px;
         }
     }
-    .sort{
+    .btn_bugungi_true{
         width: 93px;
         height: 33px;
         background: #F1F4F9;
@@ -82,6 +82,48 @@ const Settings =  styled.div`
         line-height: 16px;
         letter-spacing: 0.366667px;
         color: #202F44;
+    }
+    .btn_bugungi_false{
+        width: 93px;
+        height: 33px;
+        background: var(--primaryColor);
+        border: 1px solid #E6E6E6;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.366667px;
+        color: #ffffff;
+    }
+    .btn_hammasi_false{
+        width: 93px;
+        height: 33px;
+        background: #F1F4F9;
+        border: 1px solid #E6E6E6;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.366667px;
+        color: #202F44;
+    }
+    .btn_hammasi_true{
+        width: 93px;
+        height: 33px;
+        background: var(--primaryColor);
+        border: 1px solid #E6E6E6;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.366667px;
+        color: #ffffff;
     }
     .hr{
         width: 100%;
@@ -104,7 +146,6 @@ const Categories = styled.div`
     justify-content: space-between;
     padding: 5px 30px;
     div{
-        width: 20%;
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
@@ -112,12 +153,24 @@ const Categories = styled.div`
         line-height: 21px;
         color: #9E9E9E;
     }
-    .read{
-        display: flex;
-        justify-content: flex-start;
+    .idraqam{
+        flex: 1;
     }
     .ismFamilya{
-        width: 30%;
+        padding-left: 20px;
+        flex-basis: 250px;
+    }
+    .taklifNomi{
+        flex: 2;
+    }
+    .sana{
+        flex-basis: 200px;
+    }
+    .read{
+        flex:2;
+    }
+    .ochirish{
+        flex: 2;
     }
  
 `

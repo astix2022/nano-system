@@ -2,7 +2,7 @@ import React from 'react'
 
 const Ustozlar = () => {
   return (
-    <div>Ustozlar</div>
+    <div>working...</div>
   )
 }
 
