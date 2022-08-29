@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 0 24px;
+  padding: 0px;
 `;
 
 const Wrapper = styled.div`
@@ -35,7 +35,7 @@ const Title = styled.div`
 const SubTitle = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 42px;
   color: #3a3a3a;
   margin-right: 20px;
@@ -57,13 +57,20 @@ const Search = styled.input`
   padding: 10px;
 `;
 
-const TabelContainer = styled.div``;
+const TabelContainer = styled.div`
+  padding: 0 30px;
+  
+`;
 
 const TableTop = styled.div`
   display: flex;
   height: 50px;
   .tit {
-    width: 180px;
+    width: 220px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
   }
 `;
 
@@ -73,11 +80,8 @@ const TabelCard = styled.div`
   display: flex;
   width: 100%;
   height: fit-content;
-  /* padding: 5px 30px; */
   background-color: #f5f8ff;
   align-items: center;
-  /* justify-content: space-between; */
-  /* margin: 10px 0; */
   border-radius: 10px;
   height: fit-content;
   .tit {

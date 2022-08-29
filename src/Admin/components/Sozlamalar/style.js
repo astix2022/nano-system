@@ -6,7 +6,7 @@ const Container = styled.div`
 `;
 
 const Cards = styled.div`
-  margin: 50px;
+  margin: 40px 24px 5px 24px;
 `;
 
 const Card = styled.div`

@@ -27,25 +27,32 @@ const Sozlamalar = () => {
   const passwordRef = useRef("");
   const roleRef = useRef("");
 
-  const {mutate} = useMutation(()=>{
-    return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/set/login`,{method:'POST',headers:{'Content-type':'application/json'},
-    body:JSON.stringify({fullname:nameRef.current.value, login:loginRef.current.value, password:passwordRef.current.value,role:roleRef.current.value})}) 
-    .then(res=>res.json) 
-  },
-  {
-    onSuccess:(res)=>{
-      
+  const { mutate } = useMutation(
+    async () => {
+      const res = await fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/set/login`, {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          fullname: nameRef.current.value,
+          login: loginRef.current.value,
+          password: passwordRef.current.value,
+          role: roleRef.current.value,
+        }),
+      });
+      return res.json;
     },
-    onError: (err)=>{
-
+    {
+      onSuccess: (res) => { },
+      onError: (err) => {},
     }
-  })
+  );
   const add = () => {
-    mutate();
-    console.log(nameRef.current.value);
-    console.log(loginRef.current.value);
-    console.log(passwordRef.current.value);
-    console.log(roleRef.current.value);
+    mutate()
+    if (item === false) {
+      setItem(!false);
+    } else if (item === true) {
+      setItem(!true);
+    }
   };
 
   const submit = () => {
@@ -104,7 +111,7 @@ const Sozlamalar = () => {
 
   return (
     <Container>
-      <NavDash />
+      <NavDash info={"Sozlamalar"} />
       <Cards>
         <Card>
           <Card.Wrap1>
