@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 0px;
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -33,7 +35,7 @@ const Title = styled.div`
 const SubTitle = styled.div`
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 42px;
   color: #3a3a3a;
   margin-right: 20px;
@@ -55,6 +57,50 @@ const Search = styled.input`
   padding: 10px;
 `;
 
+const TabelContainer = styled.div`
+  padding: 0 30px;
+  
+`;
+
+const TableTop = styled.div`
+  display: flex;
+  height: 50px;
+  .tit {
+    width: 220px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
+`;
+
+const Tabel = styled.div``;
+
+const TabelCard = styled.div`
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  background-color: #f5f8ff;
+  align-items: center;
+  border-radius: 10px;
+  height: fit-content;
+  .tit {
+    width: 180px;
+  }
+  .editBtn {
+    width: 68px;
+    height: 22px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      #fe1e1e;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: white;
+  }
+  .blue {
+    color: #1e5dfe;
+  }
+`;
+
 export {
   Container,
   Header,
@@ -64,4 +110,8 @@ export {
   TodayButton,
   Search,
   Wrapper,
+  TabelContainer,
+  TableTop,
+  Tabel,
+  TabelCard,
 };

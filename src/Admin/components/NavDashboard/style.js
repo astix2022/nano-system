@@ -4,12 +4,15 @@ import { ReactComponent as lop } from "../../../assets/icons/Group.svg";
 import { ReactComponent as wa } from "../../../assets/icons/Wallet.svg";
 
 const Container = styled.div`
-  margin-left: 24px;
-  margin-top: 30px;
-  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
 `;
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,24 +26,22 @@ const Wrap1 = styled.div`
 const Wrap2 = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
   p{
-    margin-top: 13px;
-    margin-left: 68px;
-    margin-right: 10px;
+    /* margin-top: 13px; */
+    /* margin-left: 68px; */
+    /* margin-right: 10px; */
     color: var(--primaryColor);
     cursor: pointer;
   }
   .amou{
-    margin-right: 49px;
-    margin-left: 10px;
+    /* margin-right: 49px; */
+    /* margin-left: 10px; */
   }
 `;
 
 const Input = styled.input`
   box-sizing: border-box;
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,13 +65,11 @@ const Title = styled.div`
 
 const Button = styled.button`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
   gap: 8px;
-  width: 131px;
-  height: 37px;
+  width: 110px;
+  height: 34px;
   background: #1e5dfe;
   border: 1px solid #1e5dfe;
   border-radius: 8px;
@@ -78,18 +77,16 @@ const Button = styled.button`
 `;
 
 const Play = styled(wa)`
-position: absolute;
-left: 930px;
-z-index: 100;
-cursor: pointer;
-  /* margin-left: -100px; */
+  position: absolute;
+  left: 930px;
+  z-index: 100;
+  cursor: pointer;
 `
 
 const Search = styled(earch)`
   position: relative;
   left: -380px;
   cursor: pointer;
-  /* stroke: black; */
 `
 
 const Lop = styled(lop)``

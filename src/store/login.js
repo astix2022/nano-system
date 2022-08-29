@@ -10,7 +10,7 @@ export const getLogin = createAsyncThunk('login', async ({ login, password }, { 
             })
         })
         const data = await response.json()
-
+    
         if(!response.ok){
             rejectWithValue(response)
             throw new Error(response)

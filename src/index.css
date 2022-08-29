@@ -1,10 +1,10 @@
 /* * Font */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
-@import 'antd/dist/antd.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "antd/dist/antd.css";
 
 /* * Parametrs */
 * {
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* * Colors */
@@ -52,30 +52,30 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 /* * text-center */
-.block-center{
+.block-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.popover{
+.popover {
   font-size: 16px;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   transition-duration: 0.5s;
 }
 
-.popover:hover{
+.popover:hover {
   color: var(--primaryColor);
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-input{
+input {
   outline: none;
 }
 
@@ -83,32 +83,31 @@ input:focus{
     outline: none;
     box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); 
 }
-textarea{
+textarea {
   outline: none;
   resize: none;
 }
 
 textarea:focus{
   outline: none;
-
   box-shadow: 0 0 0 3px rgba(21, 156, 228, 0.4); 
 }
 
-button{
+button {
   cursor: pointer;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none; 
-	-khtml-user-select: none; 
-	-moz-user-select: none; 
-	-ms-user-select: none; 
-	user-select: none; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-button:active{
+button:active {
   transform: scale(0.98);
   opacity: 0.8;
 }
 
-.icons:active{
+.icons:active {
   fill: black;
 }

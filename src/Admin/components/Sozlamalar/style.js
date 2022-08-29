@@ -6,7 +6,7 @@ const Container = styled.div`
 `;
 
 const Cards = styled.div`
-  margin: 24px;
+  margin: 40px 24px 5px 24px;
 `;
 
 const Card = styled.div`
@@ -14,8 +14,8 @@ const Card = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 144px;
-  padding: 24px 50px;
+  height: 104px;
+  padding: 14px 20px;
   border-radius: 15px;
   background: #ffffff;
 `;
@@ -31,14 +31,14 @@ const Fonts = styled.div``;
 Fonts.Title = styled.div`
   font-style: normal;
   font-weight: 600;
-  font-size: 27px;
+  font-size: 20px;
   line-height: 38px;
 `;
 Fonts.SubTitle = styled.div`
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 14px;
   line-height: 42px;
   color: #3a3a3a;
 `;
