@@ -1,10 +1,6 @@
 import {  createSlice, createAsyncThunk  } from '@reduxjs/toolkit'
 
-<<<<<<< HEAD
-export const getPost = createAsyncThunk('post', async ()=>{
-    return fetch ('',{method:'POST'})
-    .then(res => res.json())
-=======
+
 export const Post = createAsyncThunk('post', async ({image,title,message})=>{
     return fetch ('http://nano-system.5p-agency.uz/api/v1/ceo/news',
     {
@@ -14,7 +10,6 @@ export const Post = createAsyncThunk('post', async ({image,title,message})=>{
     }
     )
     .then(res=>res.json())
->>>>>>> fc579665f64674b9f49994439fb0318086925025
 })
 
 

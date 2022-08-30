@@ -45,7 +45,6 @@ const loginSlice = createSlice({
             state.status = 'error'
         },
         [getLogin.fulfilled]: (state, action) => {
-            console.log(action.payload.token)
             state.data = action.payload
             state.status = 'success'
             localStorage.setItem('token', action.payload.token)

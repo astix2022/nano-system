@@ -1,7 +1,8 @@
 import React,{useEffect} from "react";
-import Card from './Card'
 import {useDispatch, useSelector} from 'react-redux'
 import { getLogin } from "../../../../store/getLogin";
+// import { useNavigate } from "react-router-dom";
+import Card from './Card'
 import {
   Container,
   Header,
@@ -14,19 +15,20 @@ import {
 } from "./style";
 
 const UsersT = () => {
+  // const navigate = useNavigate()
   const dispatch = useDispatch()
-  const data = useSelector((store) => store?.getLogin?.data);
-  console.log(data);
+  const data = useSelector((store) => store.getLogin.data);
   useEffect(()=>{
     dispatch(getLogin());
   },[])
+  console.log(data);
   return (
     <Container>
       <Header>
         <Title>Qo'shilgan foydalanuvchilar</Title>
         <TitleBox>
           <Wrapper>
-            <SubTitle>0 ta</SubTitle>
+            <SubTitle>{data?.logins?.length} ta</SubTitle>
             <TodayButton>Today</TodayButton>
           </Wrapper>
           <Search placeholder="Search" type={"text"} />
@@ -34,13 +36,12 @@ const UsersT = () => {
         <div className="line"></div>
       </Header>
       {
-        data?.map(()=>{
+        data?.logins?.map((value)=>{
           return(
-            <div></div>
+            <Card key={value?.id} info={value} />
           )
         })
       }
-      {/* <Card/> */}
     </Container>
   );
 };

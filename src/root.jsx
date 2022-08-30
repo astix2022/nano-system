@@ -4,7 +4,6 @@ import RouterSaytbar from "./Admin/RouterSaytbar";
 import { useNavigate } from "react-router-dom";
 
 const Root = () => {
-	// const role = localStorage.getItem("role")	
 	const role = JSON.parse(localStorage.getItem("role"));
 	const navigate = useNavigate();
 	useEffect(() => {
@@ -12,7 +11,7 @@ const Root = () => {
 			navigate("/signin");
 		}
 	}, []);
-	return role === "ceo" ? <RouterSaytbar /> : <Router />;
-};
+	return role == 'ceo' ? <RouterSaytbar /> : <Router />;
+}; 
 
 export default Root;

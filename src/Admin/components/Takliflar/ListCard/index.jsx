@@ -22,6 +22,7 @@ const ListCard = ({info,onClick}) => {
         </button>
       </div>
       {state && <Madal  active={setState} title={info?.message}/> }
+      <div className='active'></div>
     </Container>
   );
 }
