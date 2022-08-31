@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react'
+import React, {useEffect,useState,useMemo,useCallback} from 'react'
 import { Container, Settings, TableSection, Wrapper, Icon, Categories } from './style'
 import ListCard from './ListCard'
 import NavDashboard from '../NavDashboard'
@@ -42,9 +42,13 @@ const Takliflar = () => {
   useEffect(()=>{
     dispatch(getData())
   },[])
-  
-  console.log(data);
-  return (
+    // const mem = useMemo(()=>{
+    // return 
+    // },[])
+  // const calback = useCallback(()=>{
+    
+  // },[])
+  return (  
     <Container>
       <NavDashboard info={'Takliflar'} />
       <Wrapper>
@@ -75,7 +79,7 @@ const Takliflar = () => {
           {
             data?.map((value) => {
               return (
-                <ListCard key={value?.id} info={value} onClick={()=> dispatch(delateIdData({id:value?.id}))} />
+                <ListCard key={value?.id} info={value}  onClick={()=> dispatch(delateIdData({id:value.id}))}/>
               )
             })
           }
@@ -85,4 +89,4 @@ const Takliflar = () => {
     </Container>
   )
 }
-export default Takliflar
+export default (Takliflar)
