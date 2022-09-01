@@ -27,7 +27,7 @@ const Saytbar = () => {
             )
           })
         }
-        <button onClick={logOut} className='logOut'>logout</button>
+        <p onClick={logOut} className='logOut'>Logout</p>
       </Wrapper>
       <Result>
         <Outlet />

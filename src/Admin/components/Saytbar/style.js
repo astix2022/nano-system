@@ -13,14 +13,16 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
+    /* position: fixed; */
+    /* border: 1px solid red; */
     .logo{
         margin-left: 16px;
         margin-top: 23px;
     }
     .active{
 		color: #9E9E9E;
-        background-color: #ade8f4;
-        border-right: 3px solid #00b4d8;
+        background-color: #ced4da;
+        border-right: 3px solid #adb5bd;
 	}
     .wrapperFalse{
         width:250px;
@@ -31,6 +33,17 @@ const Wrapper = styled.div`
         width:250px;
         height: 250px;
         background-color: black;
+    }
+    .logOut{
+        /* display: inline-flex; */
+        margin-left: 25px;
+        width: fit-content;
+        background-color: white;
+        color: #9E9E9E;
+        font-weight:420;
+        font-size: 16px;
+        cursor: pointer;
+        user-select: none;
     }
     
 `
@@ -52,7 +65,7 @@ const Link = styled(NavLink)`
     color: #9E9E9E;
     gap: 5px;
     :hover{
-        background-color: #caf0f8;
+        background-color: #e9ecef;
         color:  #9E9E9E !important;
     }
 ;
