@@ -1,19 +1,23 @@
 import styled from "styled-components";
 import { ReactComponent as sending} from "../../../../assets/icons/sending.svg";
+import { ReactComponent as back} from "../../../../assets/icons/profil_back.svg";
 
 const Container = styled.div`   
     width: 100%;
     height: 100vh;
-    margin-top: 10px;
-    padding: 30px 40px;
     .steps{
         width: 100%;
     }
 
-    .buttuns{
+    .exit{
+        width: 100%;
+        height: 60px;
+        background-color: white;
         display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        padding: 0px 40px;
     }
 `
 
@@ -21,6 +25,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 10px 40px;
+
+    .buttuns{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
 `
 
 const Sending = styled.div`
@@ -51,6 +62,11 @@ const Icon = styled.div``
 
 Icon.Sending = styled(sending)`
     width: 70px;
+`
+
+Icon.Back = styled(back)`
+    width: 20px;
+    cursor: pointer;
 `
 
 const Inputs = styled.div`
