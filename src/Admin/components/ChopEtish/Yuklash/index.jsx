@@ -25,14 +25,14 @@ const Yuklash = () => {
     if(state === true) return setState(!true)
     else if(state === false) return setState(!false)
 	};
-  // const navigate = useNavigate()
-  // const onSubmit = ()=>{
-  //   navigate('/chopEtish')
-  // }
+  const navigate = useNavigate()
+  const onSubmit = ()=>{
+    navigate('/chopEtish')
+  }
   return (
     <Container>
       <div className="exit">
-        <Icon.Back/>
+        <Icon.Back onClick={onSubmit}/>
         <span>Chqish</span>
       </div>
       <Wrapper>

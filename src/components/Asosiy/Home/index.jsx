@@ -1,43 +1,33 @@
 import React from 'react'
-import { Container, LeftWrapp, RightWrapp } from './style'
-import Education from '../../../assets/imgs/education.png'
-import { ReactComponent as User } from '../../../assets/icons/user-tie.svg'
-import { ReactComponent as Student } from '../../../assets/icons/student.svg'
-// import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
-
-const Home = () => {
+import {Container,Wrapper,WrapLeft,WrapRight,Imgs,Result,Title,Icon} from './style'
+import photo from '../../../assets/imgs/photo1.png'
+const Asosiy = () => {
   return (
     <Container>
-      <Reveal left>
-        <LeftWrapp>
-            <h1 className='title'>Chegarasiz  <span>o’qish, </span><span>sizning</span> qo’llaringizda!</h1>
-            <p className='description'>Sayt ASTIX jamoasi tomonidan 45-maktab uchun yasaldi va foydalanishga topshirildi!</p>
-            <div className='cards'>
-              <div className="card">
-                <span><User/></span>
-                <span className='card-info'>
-                  <div className='card__info'>50+</div>
-                  <div className='teachers'>Ustozlar</div>
-                </span>
+      <Wrapper>
+        <WrapLeft>
+          <Imgs><img className='des_img' src={photo} alt="img" /></Imgs>
+          <Title>
+            <h1 className='title_title'>Bu yilgi bitiruvchilarimizning deyarli hammasi oliy o’quv yurtiga qadam qo’yishdi.</h1>
+            <p className='title_des'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing tristique id cursus dictum blandit malesuada. Fermentum, turpis tortor pulvinar eget proin purus amet augue.</p>
+            <Result>
+              <p className='result_date'>17:58, 20.08.2022</p>
+              <div className='border'></div>
+              <div className='viewed'>
+                <Icon.Eye/>
+                <p className='viewed_des'>204</p>
               </div>
-              <div className="card">
-                <span><Student/></span>
-                <span className='card-info'>
-                  <div className='card__info'>270+</div>
-                  <div className='teachers'>O’quvchilar</div>
-                </span>
-              </div>
-            </div>
-        </LeftWrapp>
-      </Reveal>
-      <Reveal right>
-        <RightWrapp>
-            <img src={Education}/>
-        </RightWrapp>
-      </Reveal>
+            </Result>
+          </Title>
+        </WrapLeft>
+        <WrapRight>
+          <div className='wrap'>
+          <h1 className='title_des'>SO'NGI YANGILIKLAR</h1>
+          </div>
+        </WrapRight>
+      </Wrapper>
     </Container>
   )
 }
 
-export default Home
+export default Asosiy
