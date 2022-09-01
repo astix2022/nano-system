@@ -28,12 +28,26 @@ const Container = styled.div`
             font-weight: 600;
             font-size: 16px;
             color: #3A3A3A;
+            @media screen and (max-width:706px) {
+            font-size: 14px;
+            }
+
+            @media screen and (max-width:483px) {
+                font-size: 13px;
+            }
         }
         .card-dec{
             font-style: normal;
             font-weight: 300;
             font-size: 13px;
             color: #000000;
+            @media screen and (max-width:706px) {
+            font-size: 12px;
+            }
+
+            @media screen and (max-width:483px) {
+                font-size: 11px;
+            }
         }
         .card-date{
             display: flex;
@@ -42,6 +56,13 @@ const Container = styled.div`
             font-weight: 400;
             font-size: 13px;
             color: #9E9E9E;
+            @media screen and (max-width:706px) {
+            font-size: 12px;
+            }
+
+            @media screen and (max-width:483px) {
+                font-size: 11px;
+            }
         }
     }
 
