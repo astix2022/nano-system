@@ -4,14 +4,14 @@ import RouterSaytbar from "./Admin/RouterSaytbar";
 import { useNavigate } from "react-router-dom";
 
 const Root = () => {
-	const role = JSON.parse(localStorage.getItem(""));
+	const role = JSON.parse(localStorage.getItem('role'));
 	const navigate = useNavigate();
 	useEffect(() => {
 		if (!role) {
 			navigate("/signin");
 		}
 	}, []);
-	return role === 'ceo' ? <RouterSaytbar /> : <Router />;
+	return role == 'ceo' ? <RouterSaytbar /> : <Router />;
 }; 
 
 
