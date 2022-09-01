@@ -6,10 +6,12 @@ import {ReactComponent as User} from '../../assets/icons/user-avatar.svg'
 import  {ReactComponent as user_profil} from '../../assets/icons/user_profil_icon.svg'
 import  {ReactComponent as user_qoshish} from '../../assets/icons/user_qoshish_icon.svg'
 import  {ReactComponent as user_chiqish} from '../../assets/icons/user_chiqish_icon.svg'
+import  {ReactComponent as navSearch} from '../../assets/icons/nav-search.svg'
+import  {ReactComponent as navAvatar} from '../../assets/icons/nav-avatar.svg'
 import { Icon } from "../Profil/style";
+
 const Container = styled.div`
     width: 100%;
-
 	.active_back{
 		color: #3434FF;
 		cursor: pointer;
@@ -34,12 +36,12 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 	padding: 0 100px;
 	width: 100%;
-	height: 130px;
+	height: 100px;
 	background-color: #ffffff;
 	background-color: white;
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
 	.active{
-		color: #0152AE;
+		border-bottom: 1px solid #000000;
 	}
 `
 const Nav = styled.nav`
@@ -47,15 +49,28 @@ const Nav = styled.nav`
 	gap: 24px;
 `
 const Link = styled(NavLink)`
-  	font-family: 'Poppins', sans-serif;
 	font-style: normal;
-	font-weight: 560;
-	font-size: 20px;
-	line-height: 30px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: center;
+	text-align: center;
 	color: #000000;
+	padding-bottom: 5px;
+	:hover{
+		color: #000000 !important;
+	}
 `
 const NavLogo = styled.div`
 	cursor: pointer;
+	font-style: normal;
+	font-weight: 400;
+	span{
+		font-style: normal;
+		font-weight: 400;
+		color: #1E5DFE
+	}
 `
 
 const Icons = styled.div`
@@ -66,19 +81,15 @@ const Icons = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 50px;
-		height: 50px;
-		left: 1166px;
-		top: 50px;
-		background: rgba(162, 162, 162, 0.1);
-		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-		border-radius: 12px;
+		width: 40px;
+		height: 40px;
+		background: #ffffff;
+		box-shadow: 0px 0px 2px #1A1A1A;
+		border-radius: 50%;
 		cursor: pointer;
 	}
 `
 
-Icons.Search = styled(Search)``
-Icons.Sun = styled(Sun)``
 Icons.User = styled(User)``
 Icons.Profil = styled(user_profil)`
 	cursor: pointer;
@@ -89,6 +100,8 @@ Icons.Qoshish = styled(user_qoshish)`
 Icons.Chiqish = styled(user_chiqish)`
 	cursor: pointer;
 `
+Icons.navSearch = styled(navSearch)``
+Icons.navAvatar = styled(navAvatar)``
 export
 {
     Container,

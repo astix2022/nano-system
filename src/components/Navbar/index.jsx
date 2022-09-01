@@ -1,5 +1,5 @@
-import { navbar } from "../../utils/navbar";
 import React, { useState } from "react";
+import { navbar } from "../../utils/navbar";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons } from "./style";
 import { Popover } from "antd";
@@ -39,7 +39,7 @@ const Navbar = () => {
       <Header>
         <Wrapper>
           <NavLogo onClick={() => navigate("/asosiy")}>
-            <h2>Logo</h2>
+            <h2><span>45 - </span>IDUMI</h2>
           </NavLogo>
           <Nav>
             {navbar.map(({ id, title, path, hidden }) => {
@@ -54,12 +54,8 @@ const Navbar = () => {
           </Nav>
           <Icons>
             <div className="icon-wrapper">
-              <Icons.Search />
+              <Icons.navSearch />
             </div>
-            <div className="icon-wrapper">
-              <Icons.Sun />
-            </div>
-            <div  className="icon-wrapper">
               <Popover
                 content={
                   <div style={{display:'flex',gap:'10px'}}>
@@ -72,9 +68,10 @@ const Navbar = () => {
                 visible={visible}
                 onVisibleChange={handleVisibleChange}
               >
-                <Icons.User />
+                <div  className="icon-wrapper">
+                  <Icons.navAvatar />
+                </div>
               </Popover>
-            </div>
           </Icons>
         </Wrapper>
       </Header>
