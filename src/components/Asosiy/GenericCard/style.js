@@ -7,12 +7,19 @@ const Container = styled.div`
     width: 340px;
     height: fit-content;
     background: #FFFFFF;
-    border-radius: 5px;
-    border: 1px solid #9E9E9E;
+    border-left: 1px solid #1E5DFE;
+    padding-left: 10px;
+
+    .img{
+        width: 100%;
+        border-radius: 5px;
+    }
     .notImg{
         width: 100%;
+        border-radius: 5px;
     }
     .foter{
+        width: 100%;
         display: flex;
         flex-direction: column;
         padding: 12px;
@@ -36,6 +43,42 @@ const Container = styled.div`
             font-size: 13px;
             color: #9E9E9E;
         }
+    }
+
+    @media screen and (max-width:1115px) {
+        width: 450px;
+    }
+
+    @media screen and (max-width:1006px) {
+       width: 390px;
+    }
+
+    @media screen and (max-width:887px) {
+       width:350px;
+    }
+
+    @media screen and (max-width:810px) {
+       width:320px;
+    }
+
+    @media screen and (max-width:747px) {
+       width: 300px;
+    }
+
+    @media screen and (max-width:747px) {
+       width: 270px;
+    }
+
+    @media screen and (max-width:648px) {
+       width: 250px;
+    }
+
+    @media screen and (max-width:607px) {
+       width: 240px;
+    }
+
+    @media screen and (max-width:607px) {
+       width: 100%;
     }
 `
 const Eye = styled(eye)``
