@@ -1,5 +1,5 @@
-import { navbar } from "../../utils/navbar";
 import React, { useState } from "react";
+import { navbar } from "../../utils/navbar";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons } from "./style";
 import { Popover } from "antd";
