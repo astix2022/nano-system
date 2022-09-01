@@ -11,7 +11,7 @@ const Root = () => {
 			navigate("/signin");
 		}
 	}, []);
-	return role == 'ceo' ? <RouterSaytbar /> : <Router />;
+	return role === 'ceo' ? <RouterSaytbar /> : <Router />;
 }; 
 
 

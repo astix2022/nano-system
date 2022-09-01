@@ -14,7 +14,7 @@ const Asosiy = () => {
       <Yutuqlar/>
       <Footer/>
     </div>
-  )
+  ) 
 }
 
 export default Asosiy
