@@ -1,82 +1,61 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-padding: 0px 100px;
+  padding: 0 150px;
+  @media (max-width: 1200px) {
+    padding: 0 5px;
+  }
+`;
 
-.sub-title::after{
-    content: 'o’zgarishlar';
-    color: var(--primaryColor);
-}
+const Wrapper = styled.div`
+  width: 100%;
+`;
 
-/* swiper-controls */
-.swiper{
-    height: 320px;
-}
+const Title = styled.div`
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  color: #3a3a3a;
+  text-transform: uppercase;
+  @media (max-width: 1070px) {
+    font-size: 20px;
+    text-align: center;
+  }
+`;
 
-.swiper-button-next{
-    display: none;
-}
-
-.swiper-button-prev{
-    display: none;
-}
-
-.swiper-pagination{
-    top: 300px;
-    justify-content: space-between;
-}
-
-.swiper-slide{
-    width: 397px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.swiper-pagination-bullet-active{
-    background-color: #066AC9;
-}
-
-`
-const Card = styled.div`
-    width: 150px;
-    width: 100%;
-    height: 250px;
-    border-radius: 12px;
-
-    .noImg{
-        user-select: none;
-        width: 100%;
-        border-radius: 12px;
-    }
-
-`
-
-const Des = styled.div`
-    width: 100%;
-    height: 68px;
-    display: flex;
+const Block = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1070px) {
     flex-direction: column;
+  }
+  @media (max-width: 720px) {
+    display: flex;
     justify-content: center;
-    background: linear-gradient(90deg, #0152AE 30.59%, rgba(102, 138, 183, 0.7) 65.51%, rgba(201, 193, 193, 0) 100%);
-    border-radius: 0px 0px 12px 12px;
-    position: absolute;
-    padding: 32px 15px;
-    top: 196px;
-
-    .des-text{
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
-    color: #ffffff;
+    align-items: center;
+  }
+  .div {
+    @media (max-width: 1070px) {
+      display: flex;
+      flex-wrap: wrap;
+      .genericcard {
+        display: none;
+      }
     }
-
-    .des-date{
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 15px;
-    color: #ffffff;
+    @media (max-width: 720px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-`
+  }
+  .line {
+    width: 100px;
+    height: 0px;
+    border: 1px solid #1e5dfe;
+    transform: rotate(-90deg);
+  }
+`;
 
-export  {Container,Card,Des}
+export { Container, Wrapper, Title, Block };
