@@ -1,98 +1,34 @@
-import React from "react";
-import {
-  Block,
-  Boxes,
-  Button,
-  Container,
-  Df,
-  Input,
-  Links,
-  Logo,
-  Texts,
-  Title,
-  Wrapper,
-} from "./style";
-import Loc from "../../assets/icons/location.svg";
-import Tel from "../../assets/icons/tel.svg";
-import Gma from "../../assets/icons/gmail.svg";
-import Home from "../../assets/icons/home.svg";
-import Check from "../../assets/icons/check.svg";
-import Err from "../../assets/icons/error.svg";
-import Inst from '../../assets/icons/instagram.svg'
-import Tg from '../../assets/icons/telegram.svg'
-import Yt from '../../assets/icons/youtube.svg'
-import Fb from '../../assets/icons/Facebook.svg'  
+import React from 'react'
+import {Container,Wrapper,WrapLeft,WrapRight,WrapCenter} from './style'
 
 const Footer = () => {
   return (
     <Container>
       <Wrapper>
-        {/* Contact Us */}
-        <Block>
-          <Title>Contact Us</Title>
-          <Texts>
-            <Df>
-              <img src={Loc} alt="" />
-              <Boxes>
-                Palon ko’cha, 25-uy, Qaysidir mahalla, Urganch tuman, Xorazm
-                Viloyat
-              </Boxes>
-            </Df>
-            <Df>
-              <img src={Tel} alt="" />
-              <Boxes>123 456 7890</Boxes>
-            </Df>
-            <Df>
-              <img src={Gma} alt="" />
-              <Boxes>45IDUMI@gmail.com</Boxes>
-            </Df>
-          </Texts>
-        </Block>
-        {/* Page Map */}
-        <Block className="mm">
-          <Title>Page Map</Title>
-          <Texts>
-            <Df>
-              <img src={Home} alt="" />
-              <Boxes>Asosiy</Boxes>
-            </Df>
-            <Df>
-              <img src={Check} alt="" />
-              <Boxes>Taklif</Boxes>
-            </Df>
-            <Df>
-              <img src={Err} alt="" />
-              <Boxes>Ariza</Boxes>
-            </Df>
-          </Texts>
-        </Block>
-        {/* A’loqa */}
-        <Block className="m">
-          <Title>A’loqa</Title>
-          <Texts>
-            <Df>
-              <Input type={"text"} placeholder="Ism" />
-              <Logo>LOGO</Logo>
-            </Df>
-            <Texts>
-              <Input
-                type={"text"}
-                placeholder="Telefon raqam yoki email"
-                className="wd"
-              ></Input>
-              <Button>Yuborish</Button>
-            </Texts>
-          </Texts>
-        </Block>
+        <WrapLeft>
+          <h1 className='wrapleft_title'>SAYT XARITASI</h1>
+          <p className='wrapleft_des'>Bugungi yangiliklar</p>
+          <p className='wrapleft_des'>Maktabdagi o’zgarishlar</p>
+          <p className='wrapleft_des'>Maktabimiz yutuqlari</p>
+          <p className='wrapleft_des'>Biz bilan a’loqa</p>
+        </WrapLeft>
+        <WrapCenter>
+          <h1 className='wrapcenter_title'>WEB STUDIO XIZMATI</h1>
+          <div className='inputs'>
+            <input className='inputs_input' type="text"  placeholder='Ism Familiya'/>
+            <input className='inputs_input' type="text" placeholder='Telefon raqam'/>
+          </div>
+          <button className='btn'>Yuborish</button>
+        </WrapCenter>
+        <WrapRight>
+          <h1 className='wrapright_title'>Biz bilan a’loqa</h1>
+          <a className='wrpright_link' href="45IDUMI@gmail.com">45IDUMI@gmail.com</a>
+          <a className='wrpright_link' href="tel:998931234567">+998 (93) 123 45 67</a>
+          <p className='wrapright_des'>Urganch, Paxtakor, 25-uy</p>
+        </WrapRight>
       </Wrapper>
-      <Links>
-        <img src={Inst} alt=""/>
-        <img src={Tg} alt="" className="ml" />
-        <img src={Yt} alt="" className="ml" />
-        <img src={Fb} alt="" className="ml" />
-      </Links>
     </Container>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

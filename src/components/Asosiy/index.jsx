@@ -9,12 +9,12 @@ const Asosiy = () => {
   return (
     <div>
       <Home/>
-      <EngYangi/>
+      {/* <EngYangi/>
       <Ozgarishlar/>
-      <Yutuqlar/>
+      <Yutuqlar/> */}
       <Footer/>
     </div>
-  )
+  ) 
 }
 
 export default Asosiy
