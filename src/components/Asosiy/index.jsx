@@ -9,9 +9,9 @@ const Asosiy = () => {
   return (
     <div>
       <Home/>
-      {/* <EngYangi/>
+      <EngYangi/>
       <Ozgarishlar/>
-      <Yutuqlar/> */}
+      <Yutuqlar/>
       <Footer/>
     </div>
   ) 
