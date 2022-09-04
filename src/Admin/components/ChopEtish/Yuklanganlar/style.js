@@ -1,8 +1,23 @@
 import styled from "styled-components";
-
+import { ReactComponent as back} from "../../../../assets/icons/profil_back.svg";
 const Container = styled.div`
     width: 100%;
-    padding: 10px 40px;
+    
+    .exit{
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        padding: 0px 40px;
+    }
+
+    .container_padding{
+        width: 100%;
+        padding: 10px 40px;
+    }
     `
 const Wrapper = styled.div`
     width: 100%;
@@ -50,4 +65,10 @@ const Card = styled.div`
         font-weight: 600;
     }
 `
-export {Container,Wrapper,Card}
+const Icon = styled.div``
+Icon.Back = styled(back)`
+    width: 20px;
+    cursor: pointer;
+`
+
+export {Container,Wrapper,Card,Icon}
