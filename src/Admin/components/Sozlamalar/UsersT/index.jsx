@@ -34,6 +34,13 @@ const UsersT = () => {
           <Search placeholder="Search" type={"text"} />
         </TitleBox>
         <div className="line"></div>
+        <div className="table_des">
+          <p className="table_des_title">T/R</p>
+          <p className="table_des_title">Ism familya</p>
+          <p className="table_des_title"></p>
+          <p className="table_des_title">Parol</p>
+          <p className="table_des_title">Status</p>
+        </div>
       </Header>
       {
         data?.logins?.map((value)=>{

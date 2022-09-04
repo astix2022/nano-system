@@ -27,7 +27,7 @@ const Wrapper = styled.div`
 
 const Card = styled.div`
     width: 100%;
-    height: 200px;
+    height: fit-content;
     display: flex;
     /* align-items: center; */
     justify-content: space-between;

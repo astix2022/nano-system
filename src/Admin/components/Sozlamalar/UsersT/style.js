@@ -19,6 +19,18 @@ const Header = styled.div`
     border: 1px solid #e6e6e6;
     margin: 10px 0;
   }
+
+  .table_des{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    /* justify-content: space-between; */
+  }
+
+  .table_des_title{
+    width: 20%;
+  }
 `;
 
 const TitleBox = styled.div`

@@ -27,7 +27,7 @@ const TabelCard = styled.div`
   margin-bottom: 10px;
   padding: 0 30px;
   .tit {
-    width: 220px;
+    width: 20%;
     display: flex;
     align-items: center;
     height: 30px;
