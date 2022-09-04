@@ -38,8 +38,8 @@ const UsersT = () => {
           <p className="table_des_title">T/R</p>
           <p className="table_des_title">Ism familya</p>
           <p className="table_des_title"></p>
+          <p className="table_des_title">Login</p>
           <p className="table_des_title">Parol</p>
-          <p className="table_des_title">Status</p>
         </div>
       </Header>
       {

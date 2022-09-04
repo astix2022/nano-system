@@ -24,12 +24,15 @@ const Header = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 30px;
     /* justify-content: space-between; */
   }
 
   .table_des_title{
     width: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
   }
 `;
 
