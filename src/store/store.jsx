@@ -6,6 +6,7 @@ import getLoginSlice from "./getLogin";
 import chopEtishSlice from './chopetish'
 import postSlice from './getPost'
 import taklifSlice from './taklif'
+import profilSlice from './taklif'
 import thunk from 'redux-thunk'
 
 
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
   post: chopEtishSlice,
   get: postSlice,
   taklif: taklifSlice,
+  profil:profilSlice,
 })
 
 const store = configureStore({

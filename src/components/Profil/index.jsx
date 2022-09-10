@@ -1,17 +1,23 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Container, Nav, Wrapper, WrapTop, WrapBottom, List, Card, Icon, CardTitle } from './style'
 import Table from './Table'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import {useNavigate } from 'react-router-dom';
+import {useSelector ,useDispatch} from 'react-redux'
+import { profilInfo } from '../../store/profil';
 
 const Profil = () => {
-  const navigate = useNavigate()
-
-
+    const dispatch = useDispatch
+    const navigate = useNavigate()
+    const profilinfo = useSelector((store) => store.profil)
+    dispatch(profilInfo)
     const Submit = ()=>{
         navigate('/asosiy')
-      }
+    }
+    useEffect(()=>{
+    },[])
+    console.log(profilinfo);
     return (
         <Container>
             <Nav>

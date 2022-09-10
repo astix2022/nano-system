@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container,Wrapper,WrapLeft,WrapRight,Item,Icon} from './style'
+
 const Aloqa = () => {
   return (
     <Container>

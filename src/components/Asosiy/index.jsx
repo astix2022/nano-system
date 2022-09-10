@@ -3,15 +3,15 @@ import Home from './Home'
 import Footer from '../Footer'
 import Ozgarishlar from './Ozgarishlar'
 import Yutuqlar from './Yutuqlar'
-import EngYangi from './EngYangi'
+import Boglanish from './Boglanish'
 
 const Asosiy = () => {
   return (
     <div>
       <Home/>
-      <EngYangi/>
       <Ozgarishlar/>
       <Yutuqlar/>
+      <Boglanish/>
       <Footer/>
     </div>
   ) 

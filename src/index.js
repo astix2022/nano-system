@@ -6,7 +6,6 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import store from "./store/store";
 import Root from "./root";
 import "./index.css";
-// import RouterSaytbar from './Admin/RouterSaytbar';
 
 const query = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));

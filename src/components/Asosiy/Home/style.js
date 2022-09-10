@@ -6,11 +6,9 @@ const Container = styled.div`
     height: fit-content;
     padding: 10px 100px;
     margin-top: 50px;
-
     @media screen and (max-width:1115px) {
         padding: 0px 40px;
     }
-
     .card{
         margin-top: 30px;
     }

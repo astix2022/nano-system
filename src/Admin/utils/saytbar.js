@@ -92,8 +92,8 @@ export const saytbar = [
     // },
     {
         id:8,
-        title:'Sozlamalar',
-        path:'/sozlamalar',
+        title:'Loginlar',
+        path:'/loginlar',
         element:<SozlamalarPage/>,
         search: '?',
         hidden: false,

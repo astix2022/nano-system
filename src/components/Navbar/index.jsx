@@ -5,8 +5,10 @@ import { Container, Header, Wrapper, Link, Nav, NavLogo, Icons } from "./style";
 import { Popover } from "antd";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/login";
+import MediaNavbar from './MediaNavbar'
 
 const Navbar = () => {
+  const [menuOpen, setmenuOpen] = useState(false);
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
   const dispatch = useDispatch();
@@ -42,15 +44,15 @@ const Navbar = () => {
             <h2><span>45 - </span>IDUMI</h2>
           </NavLogo>
           <Nav>
-            {navbar.map(({ id, title, path, hidden }) => {
-              return (
-                !hidden && (
-                  <Link key={id} to={path}>
-                    {title}
-                  </Link>
-                )
-              );
-            })}
+              {navbar.map(({ id, title, path, hidden }) => {
+                return (
+                  !hidden && (
+                    <Link key={id} to={path}>
+                      {title}
+                    </Link>
+                  )
+                  );
+              })}
           </Nav>
           <Icons>
             <div className="icon-wrapper">
@@ -73,6 +75,11 @@ const Navbar = () => {
                 </div>
               </Popover>
           </Icons>
+          {
+            menuOpen && <MediaNavbar active={setmenuOpen}/>
+          }
+          
+          <Icons.navMenu onClick={()=> setmenuOpen(true)}/>
         </Wrapper>
       </Header>
       <main>

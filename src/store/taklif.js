@@ -1,12 +1,12 @@
 import {  createSlice, createAsyncThunk  } from '@reduxjs/toolkit'
 
 
-export const taklif = createAsyncThunk('taklif', async ({Name,suggestName,message})=>{
-    return fetch ('http://nano-system.5p-agency.uz/api/v1/users/suggestion',
+export const taklif = createAsyncThunk('taklif', async ({Name,suggestName,message,userId})=>{
+    return fetch (`http://nano-system.5p-agency.uz/api/v1/users/suggestion`,
     {
         method:'POST',
         headers:{'Content-type':'application/json'},
-        body:JSON.stringify({Name,suggestName,message})
+        body:JSON.stringify({Name,suggestName,message,userId})
     }
     )
     .then(res=>res.json())

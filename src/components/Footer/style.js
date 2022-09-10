@@ -6,9 +6,8 @@ const Container = styled.div`
     padding: 24px 100px 60px 100px;
     margin-top: 100px;
     background-color: #3A3A3A;
-
     @media screen and (max-width:1115px) {
-        padding: 24px 50px 60px 50px;
+        padding: 70px 50px 60px 50px;
     }
 `
 const Wrapper = styled.div`

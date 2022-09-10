@@ -2,7 +2,7 @@ import React from "react";
 import Reveal from 'react-reveal/Reveal';
 import Form from './Form'
 
-const Taklif = () => {
+const Taklif = () => { 
   return (
     <Reveal>
       <Form/>

@@ -6,9 +6,21 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
+  @media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 500px) {
+    padding: 0 10px;
+  }
   img {
     width: 50%;
     height: 100vh;
+    @media (max-width: 1200px) {
+      display: none;
+    }
   }
 `;
 
@@ -17,7 +29,6 @@ const Reg = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 50%;
 `;
 
 const Wrapper = styled.div`
@@ -27,12 +38,21 @@ const Wrapper = styled.div`
   box-shadow: 0px 2.59244px 25.9244px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 52px 42px;
+  @media (max-width: 500px) {
+    width: 350px;
+  }
+  @media (max-width: 380px) {
+    width: 300px;
+  }
+  @media (max-width: 315px) {
+    width: 250px;
+  }
 `;
 
 const Title = styled.div`
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 59px;
   color: #3a3a3a;
   flex: none;
@@ -40,6 +60,10 @@ const Title = styled.div`
   flex-grow: 0;
   text-align: center;
   margin-bottom: 20px;
+  @media (max-width: 500px) {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
 `;
 
 const App = styled.div``;
@@ -61,7 +85,7 @@ App.Inp = styled.div`
     bottom: 49.19%;
     border: 1px solid #e6e6e6;
     border-radius: 8px;
-    width: 80%;
+    width: 100%;
     margin-bottom: 10px;
   }
 `;

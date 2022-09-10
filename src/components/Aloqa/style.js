@@ -3,7 +3,7 @@ import { ReactComponent as telegram } from "../../assets/icons/telegram2.svg";
 import { ReactComponent as instagram } from "../../assets/icons/instagram2.svg";
 import { ReactComponent as facebook } from "../../assets/icons/facebook2.svg";
 import { ReactComponent as youtube } from "../../assets/icons/youtube2.svg";
-import { ReactComponent as app } from "../../assets/icons/appstore.svg";
+import { ReactComponent as app } from "../../assets/icons/AppStore.svg";
 import { ReactComponent as play } from "../../assets/icons/google-play.svg";
 
 

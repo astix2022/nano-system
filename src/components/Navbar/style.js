@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import  {NavLink}  from 'react-router-dom'
-import {ReactComponent as Search} from '../../assets/icons/search.svg'
-import {ReactComponent as Sun} from '../../assets/icons/sun.svg'
 import {ReactComponent as User} from '../../assets/icons/user-avatar.svg'
 import  {ReactComponent as user_profil} from '../../assets/icons/user_profil_icon.svg'
 import  {ReactComponent as user_qoshish} from '../../assets/icons/user_qoshish_icon.svg'
 import  {ReactComponent as user_chiqish} from '../../assets/icons/user_chiqish_icon.svg'
 import  {ReactComponent as navSearch} from '../../assets/icons/nav-search.svg'
 import  {ReactComponent as navAvatar} from '../../assets/icons/nav-avatar.svg'
-import { Icon } from "../Profil/style";
+import  {ReactComponent as navMenu} from '../../assets/icons/navMenu.svg'
+
 
 const Container = styled.div`
     width: 100%;
@@ -43,11 +42,21 @@ const Wrapper = styled.div`
 	.active{
 		border-bottom: 1px solid #000000;
 	}
+	@media (max-width: 800px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0  20px;
+	}
 `
 const Nav = styled.nav`
 	display: flex;
 	gap: 24px;
+	@media (max-width: 800px) {
+		display: none;
+	}
 `
+
 const Link = styled(NavLink)`
 	font-style: normal;
 	font-weight: 400;
@@ -63,6 +72,9 @@ const Link = styled(NavLink)`
 	}
 `
 const NavLogo = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 	font-style: normal;
 	font-weight: 400;
@@ -87,6 +99,9 @@ const Icons = styled.div`
 		box-shadow: 0px 0px 2px #1A1A1A;
 		border-radius: 50%;
 		cursor: pointer;
+		@media (max-width: 800px) {
+			display: none;
+		}
 	}
 `
 
@@ -102,6 +117,14 @@ Icons.Chiqish = styled(user_chiqish)`
 `
 Icons.navSearch = styled(navSearch)``
 Icons.navAvatar = styled(navAvatar)``
+Icons.navMenu = styled(navMenu)`
+	display: none;
+	cursor: pointer;
+	margin-bottom: 9px;
+	@media (max-width: 800px) {
+		display: flex;
+	}
+`
 export
 {
     Container,

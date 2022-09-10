@@ -7,6 +7,17 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     align-items: center;
+    .loading{
+        position: absolute;
+        z-index: 999;
+    }
+    .success{
+        position: absolute;
+        top: 85%;
+        .successItem{
+            color: green    ;
+        }
+    }
     .from{
         padding: 25px;
         margin-top: 50px;

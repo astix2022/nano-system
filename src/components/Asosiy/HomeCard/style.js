@@ -3,7 +3,8 @@ import {ReactComponent as eye} from '../../../assets/icons/eye-eye.svg'
 
 
 const Container = styled.div`
-    width: 100%;
+    /* width: 100%; */
+    width: 365px;
     height: fit-content;
     display: flex;
     flex-direction: column;
