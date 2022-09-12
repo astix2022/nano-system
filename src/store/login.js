@@ -50,6 +50,8 @@ const loginSlice = createSlice({
             localStorage.setItem('token', action.payload.token)
             localStorage.setItem('role', action.payload.role)
             localStorage.setItem('userId', action.payload.userInform.id)
+            localStorage.setItem('info', JSON.stringify(action.payload.userInform))
+            console.log(action.payload);
         } 
     }
 })

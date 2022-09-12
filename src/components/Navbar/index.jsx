@@ -73,7 +73,7 @@ const Navbar = () => {
                 <div  className="icon-wrapper">
                   <Icons.navAvatar />
                 </div>
-              </Popover>
+              </Popover>  
           </Icons>
           {
             menuOpen && <MediaNavbar active={setmenuOpen}/>

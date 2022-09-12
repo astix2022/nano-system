@@ -3,13 +3,10 @@ import  {NavLink}  from 'react-router-dom'
 
 
 const Conatiner = styled.div`
-    width: 50vw;
-    height: 100vh;
-    background-color: #3A3A3A;
-    position: fixed;
-    top: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     z-index: 999;
+    position: fixed;
     @media (min-width: 800px) {
         display: none;
     }
@@ -53,6 +50,16 @@ const Conatiner = styled.div`
         }
     }
 `
+
+const Wrapper = styled.div`
+    width: 50vw;
+    height: 100vh;
+    background-color: #3A3A3A;
+    position: fixed;
+    top: 0;
+    right: 0;
+`
+
 const Link = styled(NavLink)`
     font-style: normal;
     font-weight: 300;
@@ -83,6 +90,7 @@ const Back = styled.div`
 export
 {
     Conatiner,
+    Wrapper,
     Link,
     Back,
 }

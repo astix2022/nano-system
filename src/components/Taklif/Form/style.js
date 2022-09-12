@@ -13,10 +13,8 @@ const Container = styled.div`
     }
     .success{
         position: absolute;
-        top: 85%;
-        .successItem{
-            color: green    ;
-        }
+        z-index: 99999;
+        top: 20%;
     }
     .from{
         padding: 25px;
@@ -123,6 +121,14 @@ const Container = styled.div`
             border: none;
             font-weight: 400;
             color: #FAFAFA;
+            &:disabled{
+                opacity: 0.5;
+            }
+            
+        }
+        .btn:active {
+            transform: scale(1) !important;
+            opacity: 0.5 !important;
         }
     }
 `

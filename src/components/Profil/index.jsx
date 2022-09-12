@@ -10,14 +10,11 @@ import { profilInfo } from '../../store/profil';
 const Profil = () => {
     const dispatch = useDispatch
     const navigate = useNavigate()
-    const profilinfo = useSelector((store) => store.profil)
-    dispatch(profilInfo)
+    const info = JSON.parse(localStorage.getItem('info'))
     const Submit = ()=>{
         navigate('/asosiy')
     }
-    useEffect(()=>{
-    },[])
-    console.log(profilinfo);
+    console.log(info.suggestions.length);
     return (
         <Container>
             <Nav>
@@ -26,7 +23,6 @@ const Profil = () => {
                     <span className='nav_back'>Chiqish</span>
                 </div>
             </Nav>
-            
             <Fade>
                 <Wrapper>
                     {/* WrapTop */}
@@ -35,8 +31,8 @@ const Profil = () => {
                                 <Zoom>
                                     <Icon.User />
                                     <div className='login'>
-                                        <h2 className='login_user'>Nodirbek</h2>
-                                        <p className='login_id'>ID: 123456</p>
+                                        <h2 className='login_user'>{info?.fullname || 'user'}</h2>
+                                        <p className='login_id'>ID: {info?.id || 'ID: 123456'}</p>
                                     </div>
                                     {/* <p className='edit'>Edit</p> */}
                                 </Zoom>
@@ -49,7 +45,7 @@ const Profil = () => {
                             <CardTitle>
                                     <div className='card_title'>
                                         <span className='card_title_des'>Arizalar</span>
-                                        <span className='card_title_num'>270 TA</span>
+                                        <span className='card_title_num'>0 TA</span>
                                     </div>
                             </CardTitle>
                             <div className='table'>
@@ -61,7 +57,7 @@ const Profil = () => {
                             <CardTitle>
                                     <div className='card_title'>
                                         <span className='card_title_des'>Takliflar</span>
-                                        <span className='card_title_num'>128 TA</span>
+                                        <span className='card_title_num'>{info?.suggestions?.length} TA</span>
                                     </div>
                             </CardTitle>
                             <div className='table'>

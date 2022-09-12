@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Container = styled.div`
   padding: 0 100px;
-  @media (max-width: 1366px) {
+  /* @media (max-width: 1366px) {
     padding: 0 50px;
-  }
+  } */
 `;
 
 const Wrapper = styled.div`

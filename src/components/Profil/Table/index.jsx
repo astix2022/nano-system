@@ -1,4 +1,5 @@
 import { Table } from 'antd';
+import locale from 'antd/lib/date-picker/locale/en_US';
 import React from 'react';
 import { Container } from './style'
 const columns = [
@@ -29,17 +30,12 @@ const columns = [
 
 
 ];
-const data = [];
+const info = JSON.parse(localStorage.getItem('info'))
+// info.suggestions.map((value)=>{
+//   return console.log(value.id);
+// })
 
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    name: `Shikoyat ${i}`,
-    age: '18.08.2022',
-    address: `Maktab ${i}`,
-    ariza: 'Maktabga ariza yozdim'
-  });
-}
+const data = [];
 
 const App = () => (
   <Container>

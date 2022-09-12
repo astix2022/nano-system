@@ -98,6 +98,9 @@ const Button = styled.button`
   color: white;
   height: 45px;
   margin-top: 10px;
+  &:disabled{
+    opacity: 0.5;
+  }
 `;
 
 export { Container, Reg, Wrapper, Button, Title, App };

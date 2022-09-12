@@ -1,10 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState} from "react";
 import {
   App,
   Button,
   Container,
-  Input,
-  Input1,
   Reg,
   Title,
   Wrapper,
@@ -13,6 +11,7 @@ import Dash from "../../assets/imgs/f.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getLogin } from "../../store/login";
+import Loading from '../../components/Loading'
 
 const Login = () => {
   const EmailRef = useRef("");
@@ -20,8 +19,9 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const auth = useSelector((state) => state.auth);
 
+
+  const auth = useSelector((state) => state.auth);
   const OnSubmit = () => {
     dispatch(
       getLogin({
@@ -45,8 +45,20 @@ const Login = () => {
     }
   }, [auth]);
 
+  const [atribut ,setatribut] =useState(true)
+	const change = ()=>{
+		if(EmailRef.current.value.length >= 1 && PwRef.current.value.length >=1){
+			setatribut(!true) 
+		}
+		else{
+			setatribut(true)
+		}
+	}
+  setInterval(change, 1000);
+
   return (
     <Container>
+        {auth.status === 'pending' && <Loading/>} 
       <Reg>
         <Wrapper>
           <Title>Log in</Title>
@@ -66,7 +78,7 @@ const Login = () => {
               />
             </App.Inp>
             <div className="block-center">
-              <Button onClick={OnSubmit}>Login</Button>
+              <Button atribut={atribut}  onClick={OnSubmit}>Login</Button>
             </div>
           </App>
         </Wrapper>

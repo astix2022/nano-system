@@ -8,7 +8,7 @@ export const getData = createAsyncThunk('data', async ()=>{
 
 
 export const delateIdData = createAsyncThunk('data', async ({id})=>{
-    return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestion/${id}`,{method:'DELETE'})
+    return fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestion/${id}`,{method:'DELETE',redirect:'follow'})
     .then(res=> res.json())
 
 })

@@ -13,8 +13,6 @@ const Asosiy = () => {
             <h1 className='title_title'>Bu yilgi bitiruvchilarimizning deyarli hammasi oliy o’quv yurtiga qadam qo’yishdi.</h1>
             <p className='title_des'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing tristique id cursus dictum blandit malesuada. Fermentum, turpis tortor pulvinar eget proin purus amet augue.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing tristique id cursus dictum blandit malesuada. Fermentum, turpis tortor pulvinar eget proin purus amet augue
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing tristique id cursus dictum blandit malesuada. Fermentum, turpis tortor pulvinar eget proin purus amet augue
             </p>
             <Result>
               <p className='result_date'>17:58, 20.08.2022</p>
@@ -30,7 +28,6 @@ const Asosiy = () => {
           <div className='wrap'>
             <h1 className='title_des'>SO'NGI YANGILIKLAR</h1>
               <div className='cards'>
-                <HomeCard/>
                 <HomeCard/>
                 <HomeCard/>
                 <HomeCard/>

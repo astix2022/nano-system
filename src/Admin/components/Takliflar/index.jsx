@@ -8,17 +8,6 @@ import { useSelector, useDispatch} from 'react-redux'
 const Takliflar = () => {
   const [boolean, setBoolean] = useState(false)
 
-// delate id
-  function delateId(id) {
-    fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestion/${id}`, {
-      method: 'DELETE',
-      redirect: 'follow'
-    }).then((res) => {
-      res.json().then((resp) => {
-      })
-    })
-  }
-
 // delate all
   function delateAll() {
     fetch(`http://nano-system.5p-agency.uz/api/v1/ceo/suggestions`, {
@@ -70,7 +59,7 @@ const Takliflar = () => {
         <Categories>
           <div className='idraqam'>ID raqam</div>
           <div className='ismFamilya'>Ism Familiya</div>
-          <div className='taklifNomi'>Taklid nomi</div>
+          <div className='taklifNomi'>Taklif nomi</div>
           <div className='sana'>Sana</div>
           <div className='read'>Taklifni o’qish</div>
           <div className='ochirish'>O'chrish</div>

@@ -4,7 +4,7 @@ import Madal from './modal'
 
 const ListCard = ({info,onClick}) => {
   const [state, setState] = useState(false)
-  console.log(info);
+ 
   return (
     <Container>
       <Item className="idraqam">{info?.id || "ID 1235781"}</Item>

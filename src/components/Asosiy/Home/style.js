@@ -17,14 +17,14 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: 100%;
     display: flex;
-    gap: 12px;
+    gap: 55px;
 
     @media screen and (max-width:996px) {
         flex-direction: column;
     }
     `
 const WrapLeft = styled.div`
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -50,7 +50,7 @@ const Title = styled.div`
 
     .title_title{
         font-weight: 600;
-        font-size: 25px;
+        font-size: 18px;
         color: #3A3A3A;
 
         @media screen and (max-width:706px) {
@@ -63,8 +63,8 @@ const Title = styled.div`
     }
 
     .title_des{
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: 300;
+        font-size: 13px;
 
         @media screen and (max-width:706px) {
             font-size: 13px;
@@ -127,10 +127,11 @@ Icon.Eye = styled(eye)``
 
 
 const WrapRight = styled.div`
-    width: 30%;
+    width: 50%;
     border-left: 1px solid #1E5DFE;
     
     .wrap{
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -152,6 +153,7 @@ const WrapRight = styled.div`
     }
 
     .cards{
+        width: 100%;
         gap: 10px;
 
         @media screen and (max-width:996px) {
